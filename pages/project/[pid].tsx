@@ -1,32 +1,52 @@
+import Container from "templates/coordinategrid/Container";
 import useSWR from "swr";
-import { Box, Heading, Text, OrderedList, ListItem } from "@chakra-ui/react";
 
 const fetcher = (args) => fetch(args).then((res) => res.json());
 
+const getCompletedSolutions = (
+  studentId: string,
+  number: number,
+  isMock: boolean
+) => {
+  if (isMock) {
+    return [
+      {
+        coordinates: [
+          { x: -6, y: -7, timestamp: 1617668002942 },
+          { x: 0, y: 0, timestamp: 1617668004013 },
+          { x: 4, y: 5, timestamp: 1617668004675 },
+        ],
+      },
+      {
+        coordinates: [
+          { x: -6, y: -7, timestamp: 1617668002942 },
+          { x: 0, y: 0, timestamp: 1617668004013 },
+          { x: 4, y: 5, timestamp: 1617668004675 },
+        ],
+      },
+      {
+        coordinates: [
+          { x: -6, y: -7, timestamp: 1617668002942 },
+          { x: 0, y: 0, timestamp: 1617668004013 },
+          { x: 4, y: 5, timestamp: 1617668004675 },
+        ],
+      },
+    ].slice(0, number);
+  }
+
+  return;
+};
+
 const ProjectPage = () => {
   const { data, error } = useSWR("/api/project", fetcher);
-  console.log("data", data);
+
+  const solutions = getCompletedSolutions("studentId", 1, true);
+  console.log("solutions", solutions);
 
   if (!data) {
-    return <div></div>;
+    return <div>No Project Found</div>;
   }
-  return (
-    <Box>
-      <Box>
-        <Heading>{data.name}</Heading>
-        <Text>{data.overviewText}</Text>
-      </Box>
-      <Box>
-        <Heading>Details</Heading>
-        <OrderedList>
-          {data.requirements.map((requirement) => (
-            <ListItem>{requirement}</ListItem>
-          ))}
-        </OrderedList>
-      </Box>
-      <Heading>What are your initial thoughts?</Heading>
-    </Box>
-  );
+  return <Container data={data} />;
 };
 
 export default ProjectPage;
