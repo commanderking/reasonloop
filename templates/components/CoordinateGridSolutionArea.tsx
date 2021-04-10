@@ -29,7 +29,6 @@ const CoordinateGridSolutionArea = ({ data }) => {
   return (
     <Box>
       <Box>
-        <Heading>What are your initial thoughts?</Heading>
         <CoordinateGrid
           id="coordinate grid"
           gridHeight={500}
@@ -61,7 +60,7 @@ const CoordinateGridSolutionArea = ({ data }) => {
         <Button
           onClick={() => {
             const solution = {
-              coordinates: addedIcons,
+              solution: addedIcons,
             };
 
             if (window) {
@@ -73,6 +72,7 @@ const CoordinateGridSolutionArea = ({ data }) => {
                   solution,
                 ])
               );
+              location.reload();
             }
           }}
         >

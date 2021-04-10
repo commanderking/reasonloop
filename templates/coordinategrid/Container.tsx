@@ -5,10 +5,27 @@ import {
   OrderedList,
   ListItem,
   Button,
+  Checkbox,
 } from "@chakra-ui/react";
 import CoordinateGridSolutionArea from "templates/components/CoordinateGridSolutionArea";
+import SolutionAreaDescription from "templates/components/SolutionAreaDescription";
+import { getCurrentPhase } from "templates/coordinategrid/utils";
+import { useEffect, useState } from "react";
 
 const CoordinateGridContainer = ({ data }) => {
+  const [solutions, setSolutions] = useState([]);
+
+  useEffect(() => {
+    // Temporary code to mimic API loading
+    const solutions =
+      (window && JSON.parse(window.localStorage.getItem("solutions"))) || [];
+
+    setSolutions(solutions);
+  }, []);
+  const currentPhase = getCurrentPhase(solutions);
+
+  console.log("solutions", solutions);
+  console.log("currentPhase", currentPhase);
   return (
     <Box>
       <Box>
@@ -24,6 +41,7 @@ const CoordinateGridContainer = ({ data }) => {
         </OrderedList>
       </Box>
       <Box>
+        <SolutionAreaDescription currentPhase={currentPhase} />
         <CoordinateGridSolutionArea data={data} />
       </Box>
     </Box>

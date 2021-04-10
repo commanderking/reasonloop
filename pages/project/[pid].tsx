@@ -11,21 +11,21 @@ const getCompletedSolutions = (
   if (isMock) {
     return [
       {
-        coordinates: [
+        solution: [
           { x: -6, y: -7, timestamp: 1617668002942 },
           { x: 0, y: 0, timestamp: 1617668004013 },
           { x: 4, y: 5, timestamp: 1617668004675 },
         ],
       },
       {
-        coordinates: [
+        solution: [
           { x: -6, y: -7, timestamp: 1617668002942 },
           { x: 0, y: 0, timestamp: 1617668004013 },
           { x: 4, y: 5, timestamp: 1617668004675 },
         ],
       },
       {
-        coordinates: [
+        solution: [
           { x: -6, y: -7, timestamp: 1617668002942 },
           { x: 0, y: 0, timestamp: 1617668004013 },
           { x: 4, y: 5, timestamp: 1617668004675 },
@@ -40,8 +40,7 @@ const getCompletedSolutions = (
 const ProjectPage = () => {
   const { data, error } = useSWR("/api/project", fetcher);
 
-  const solutions = getCompletedSolutions("studentId", 1, true);
-  console.log("solutions", solutions);
+  // const solutions = getCompletedSolutions("studentId", 1, true);
 
   if (!data) {
     return <div>No Project Found</div>;
