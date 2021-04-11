@@ -1,12 +1,4 @@
-import {
-  Box,
-  Heading,
-  Text,
-  OrderedList,
-  ListItem,
-  Button,
-  Checkbox,
-} from "@chakra-ui/react";
+import { Box, Heading, Text, OrderedList, ListItem } from "@chakra-ui/react";
 
 export const ProjectDescription = ({ data }) => {
   return (

@@ -1,6 +1,6 @@
-import { Box, Heading, Button } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { CoordinateGrid } from "open-math-tools";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import _ from "lodash";
 import { ProposalSubmitButton } from "templates/components/ProposalSubmitButton";
 

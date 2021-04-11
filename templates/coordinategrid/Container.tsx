@@ -38,7 +38,9 @@ const CoordinateGridContainer = ({ data }) => {
       <Box>
         <Heading>{data.name}</Heading>
       </Box>
-      <ProjectDescription data={data} />
+      {currentPhase === CoordinateGridPhases.PREDICTION && (
+        <ProjectDescription data={data} />
+      )}
 
       <Box mt={8}>
         <SolutionAreaDescription currentPhase={currentPhase} />
