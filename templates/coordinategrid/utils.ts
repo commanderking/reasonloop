@@ -6,10 +6,10 @@ export const getCurrentPhase = (solutions) => {
   }
 
   if (solutions.length === 1) {
-    return CoordinateGridPhases.FIRST_SOLUTION;
+    return CoordinateGridPhases.FIRST_PROPOSAL;
   }
 
   if (solutions.length >= 2) {
-    return CoordinateGridPhases.MODIFIED_SOLUTION;
+    return CoordinateGridPhases.MODIFIED_PROPOSAL;
   }
 };

@@ -5,7 +5,7 @@ type Props = {
   currentPhase: Phase;
 };
 
-const { PREDICTION, FIRST_SOLUTION, MODIFIED_SOLUTION } = CoordinateGridPhases;
+const { PREDICTION, FIRST_PROPOSAL, MODIFIED_PROPOSAL } = CoordinateGridPhases;
 const fontSize = "2xl";
 
 export const SolutionAreaDescription = ({ currentPhase }) => {
@@ -14,10 +14,10 @@ export const SolutionAreaDescription = ({ currentPhase }) => {
       {currentPhase === PREDICTION && (
         <Heading fontSize={fontSize}>What are your initial thoughts?</Heading>
       )}
-      {currentPhase === FIRST_SOLUTION && (
+      {currentPhase === FIRST_PROPOSAL && (
         <Heading fontSize={fontSize}>Your Original Prediction</Heading>
       )}
-      {currentPhase === MODIFIED_SOLUTION && (
+      {currentPhase === MODIFIED_PROPOSAL && (
         <Heading fontSize={fontSize}>Your Current Proposal</Heading>
       )}
     </Box>

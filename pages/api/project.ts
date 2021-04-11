@@ -25,10 +25,10 @@ const mockProjectData = {
     PREDICTION: {
       solutionPrompt: "What are your initial thoughts?",
     },
-    FIRST_SOLUTION: {
+    FIRST_PROPOSAL: {
       solutionPrompt: "What are your initial thoughts?",
     },
-    MODIFIED_SOLUTION: {
+    MODIFIED_PROPOSAL: {
       solutionPrompt: "What are your initial thoughts?",
     },
     FINAL_SOLUTION: {
