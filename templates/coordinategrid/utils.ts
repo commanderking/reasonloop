@@ -2,12 +2,14 @@ import { CoordinateGridPhases } from "templates/coordinategrid/constants";
 
 export const getCurrentPhase = (solutions) => {
   if (!solutions.length) {
-    return CoordinateGridPhases.INITIAL_ATTEMPT;
+    return CoordinateGridPhases.PREDICTION;
   }
 
   if (solutions.length === 1) {
-    return CoordinateGridPhases.SECOND_ATTEMPT;
+    return CoordinateGridPhases.FIRST_SOLUTION;
   }
 
-  const hasFinalAnswer = (solutions) => {};
+  if (solutions.length >= 2) {
+    return CoordinateGridPhases.MODIFIED_SOLUTION;
+  }
 };

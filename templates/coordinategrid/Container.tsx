@@ -1,48 +1,53 @@
-import {
-  Box,
-  Heading,
-  Text,
-  OrderedList,
-  ListItem,
-  Button,
-  Checkbox,
-} from "@chakra-ui/react";
+import { useState } from "react";
+import { Box, Heading } from "@chakra-ui/react";
 import CoordinateGridSolutionArea from "templates/components/CoordinateGridSolutionArea";
 import SolutionAreaDescription from "templates/components/SolutionAreaDescription";
 import { getCurrentPhase } from "templates/coordinategrid/utils";
-import { useEffect, useState } from "react";
+import { CoordinateGridPhases } from "templates/coordinategrid/constants";
+import ProjectDescription from "templates/components/ProjectDescription";
 
 const CoordinateGridContainer = ({ data }) => {
-  const [solutions, setSolutions] = useState([]);
+  const submittedSolutions =
+    (window && JSON.parse(window.localStorage.getItem("solutions"))) || [];
+  const [solutions, setSolutions] = useState(submittedSolutions);
 
-  useEffect(() => {
-    // Temporary code to mimic API loading
-    const solutions =
-      (window && JSON.parse(window.localStorage.getItem("solutions"))) || [];
-
-    setSolutions(solutions);
-  }, []);
   const currentPhase = getCurrentPhase(solutions);
 
-  console.log("solutions", solutions);
-  console.log("currentPhase", currentPhase);
+  const mostRecentSolutionCoordinates = solutions[0]?.solution || [];
+
+  const initialIcons = [
+    ...data.projectData.map((coordinate) => ({
+      ...coordinate,
+      size: 15,
+      image: "/home-icon.svg",
+    })),
+    ...mostRecentSolutionCoordinates.map((coordinate) => {
+      const { x, y } = coordinate;
+      return {
+        x,
+        y,
+        size: 20,
+        image: "/cell-tower.svg",
+      };
+    }),
+  ];
+
   return (
     <Box>
+      <Box>Current Phase: {currentPhase}</Box>
       <Box>
         <Heading>{data.name}</Heading>
-        <Text>{data.overviewText}</Text>
       </Box>
-      <Box>
-        <Heading>Details</Heading>
-        <OrderedList>
-          {data.requirements.map((requirement, index) => (
-            <ListItem key={`${requirement}-${index}`}>{requirement}</ListItem>
-          ))}
-        </OrderedList>
-      </Box>
-      <Box>
+      <ProjectDescription data={data} />
+
+      <Box mt={8}>
         <SolutionAreaDescription currentPhase={currentPhase} />
-        <CoordinateGridSolutionArea data={data} />
+        <CoordinateGridSolutionArea
+          isEditable={currentPhase === CoordinateGridPhases.PREDICTION}
+          initialIcons={initialIcons}
+          initialAddedIcons={mostRecentSolutionCoordinates}
+          currentPhase={currentPhase}
+        />
       </Box>
     </Box>
   );

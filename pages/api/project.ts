@@ -1,6 +1,6 @@
 const mockProjectData = {
   id: "1",
-  name: "Cell Towers in Camden, NJ",
+  name: "Project - Cell Towers in Camden, NJ",
   avatar: "robot_1",
   overviewText:
     "Government officials of the new Martian outpost are determining how many cell towers are required to cover the needs of their residents. Houses within 4 kilometers of each cell tower can receive cell coverage. How many cell towers should they build and where?",
@@ -25,13 +25,13 @@ const mockProjectData = {
     PREDICTION: {
       solutionPrompt: "What are your initial thoughts?",
     },
-    FIRST_ATTEMPT: {
+    FIRST_SOLUTION: {
       solutionPrompt: "What are your initial thoughts?",
     },
-    FOLLOW_UP_ATTEMPT: {
+    MODIFIED_SOLUTION: {
       solutionPrompt: "What are your initial thoughts?",
     },
-    FINAL_ANSWER: {
+    FINAL_SOLUTION: {
       solutionPrompt: "What are your initial thoughts?",
     },
   },
