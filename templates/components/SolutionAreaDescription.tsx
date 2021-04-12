@@ -8,9 +8,9 @@ type Props = {
 const { PREDICTION, FIRST_PROPOSAL, MODIFIED_PROPOSAL } = CoordinateGridPhases;
 const fontSize = "2xl";
 
-export const SolutionAreaDescription = ({ currentPhase }) => {
+export const SolutionAreaDescription = ({ currentPhase }: Props) => {
   return (
-    <Box>
+    <Box textAlign="center">
       {currentPhase === PREDICTION && (
         <Heading fontSize={fontSize}>What are your initial thoughts?</Heading>
       )}

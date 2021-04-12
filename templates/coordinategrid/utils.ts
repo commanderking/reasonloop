@@ -1,6 +1,7 @@
 import { CoordinateGridPhases } from "templates/coordinategrid/constants";
+import { Phase } from "templates/types";
 
-export const getCurrentPhase = (solutions) => {
+export const getCurrentPhase = (solutions): Phase => {
   if (!solutions.length) {
     return CoordinateGridPhases.PREDICTION;
   }
