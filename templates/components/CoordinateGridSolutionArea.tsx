@@ -14,6 +14,7 @@ const CoordinateGridSolutionArea = ({
   initialAddedIcons,
   isEditable,
   currentPhase,
+  onOpen,
 }) => {
   const [addedIcons, setAddedIcons] = useState(initialAddedIcons);
 
@@ -59,7 +60,7 @@ const CoordinateGridSolutionArea = ({
 
   return (
     <Box>
-      <Box>
+      <Box width={500} margin="auto">
         <CoordinateGrid
           id="coordinate grid"
           gridHeight={500}
@@ -72,6 +73,7 @@ const CoordinateGridSolutionArea = ({
       <ProposalSubmitButton
         addedIcons={addedIcons}
         currentPhase={currentPhase}
+        onOpen={onOpen}
       />
     </Box>
   );

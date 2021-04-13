@@ -1,15 +1,20 @@
 import { useState } from "react";
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Heading, useDisclosure } from "@chakra-ui/react";
 import CoordinateGridSolutionArea from "templates/components/CoordinateGridSolutionArea";
 import SolutionAreaDescription from "templates/components/SolutionAreaDescription";
 import { getCurrentPhase } from "templates/coordinategrid/utils";
 import { CoordinateGridPhases } from "templates/coordinategrid/constants";
 import ProjectDescription from "templates/components/ProjectDescription";
+import PhaseCompletionPrompt from "templates/components/PhaseCompletionPrompt";
+import ModifyProposalModal from "templates/components/ModifyProposalModal";
+import LearningResources from "templates/components/LearningResources";
 
 const CoordinateGridContainer = ({ data }) => {
   const submittedSolutions =
     (window && JSON.parse(window.localStorage.getItem("solutions"))) || [];
   const [solutions, setSolutions] = useState(submittedSolutions);
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const currentPhase = getCurrentPhase(solutions);
 
@@ -38,6 +43,8 @@ const CoordinateGridContainer = ({ data }) => {
       <Box>
         <Heading>{data.name}</Heading>
       </Box>
+
+      <PhaseCompletionPrompt data={data} currentPhase={currentPhase} />
       {currentPhase === CoordinateGridPhases.PREDICTION && (
         <ProjectDescription data={data} />
       )}
@@ -49,8 +56,14 @@ const CoordinateGridContainer = ({ data }) => {
           initialIcons={initialIcons}
           initialAddedIcons={mostRecentSolutionCoordinates}
           currentPhase={currentPhase}
+          onOpen={onOpen}
         />
       </Box>
+      <ModifyProposalModal isOpen={isOpen} onClose={onClose} />
+
+      {currentPhase !== CoordinateGridPhases.PREDICTION && (
+        <LearningResources data={data} />
+      )}
     </Box>
   );
 };

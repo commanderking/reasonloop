@@ -1,4 +1,4 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, useDisclosure } from "@chakra-ui/react";
 
 const getSubmitButtonText = (currentPhase) => {
   if (currentPhase === "PREDICTION") {
@@ -8,28 +8,35 @@ const getSubmitButtonText = (currentPhase) => {
   return "Modify Proposal";
 };
 
-export const ProposalSubmitButton = ({ addedIcons, currentPhase }) => {
-  return (
-    <Box>
-      <Button
-        onClick={() => {
-          const solution = {
-            solution: addedIcons,
-          };
+const getOnClick = (addedIcons, currentPhase, onOpen) => {
+  if (currentPhase !== "PREDICTION") {
+    console.log("correct opening");
+    return onOpen;
+  }
 
-          // TODO: This is placeholder for real submit behavior (leveraging local storage)
-          if (window) {
-            window.localStorage.setItem(
-              "solutions",
-              JSON.stringify([
-                ...(JSON.parse(window.localStorage.getItem("solutions")) || []),
-                solution,
-              ])
-            );
-            location.reload();
-          }
-        }}
-      >
+  return () => {
+    const solution = {
+      solution: addedIcons,
+    };
+
+    // TODO: This is placeholder for real submit behavior (leveraging local storage)
+    if (window) {
+      window.localStorage.setItem(
+        "solutions",
+        JSON.stringify([
+          ...(JSON.parse(window.localStorage.getItem("solutions")) || []),
+          solution,
+        ])
+      );
+      location.reload();
+    }
+  };
+};
+
+export const ProposalSubmitButton = ({ addedIcons, currentPhase, onOpen }) => {
+  return (
+    <Box textAlign="center">
+      <Button onClick={getOnClick(addedIcons, currentPhase, onOpen)}>
         {getSubmitButtonText(currentPhase)}
       </Button>
     </Box>

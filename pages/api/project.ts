@@ -26,24 +26,29 @@ const mockProjectData = {
       solutionPrompt: "What are your initial thoughts?",
     },
     FIRST_PROPOSAL: {
+      instructions:
+        "Nice! You've submitted your initial thoughts. As a next step, review some of the skills that might be helpful to helping your proposal. When you're ready, feel free to submit your first proposal.",
       solutionPrompt: "What are your initial thoughts?",
     },
     MODIFIED_PROPOSAL: {
-      solutionPrompt: "What are your initial thoughts?",
+      solutionPrompt: "MODIFIED PROPOSAL DESCRIPTION",
     },
     FINAL_SOLUTION: {
-      solutionPrompt: "What are your initial thoughts?",
+      solutionPrompt: "FINAL SOLUTION PROPOSAL",
     },
   },
   resources: [
     {
-      url: "",
-      title: "",
+      url:
+        "https://www.ixl.com/math/grade-8/find-the-distance-between-two-points",
+      title: "IXL",
+      description: "Find the distance between two points",
     },
     {
       url:
         "https://www.khanacademy.org/math/basic-geo/basic-geometry-pythagorean-theorem/pythagorean-theorem-distance/v/example-finding-distance-with-pythagorean-theorem",
       title: "Khan Academy",
+      description: "Finding distance with Pythagorean theorem",
     },
   ],
 };
