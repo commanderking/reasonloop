@@ -18,23 +18,27 @@ const CoordinateGridContainer = ({ data }) => {
 
   const currentPhase = getCurrentPhase(solutions);
 
-  const mostRecentSolutionCoordinates = solutions[0]?.solution || [];
-
-  const initialIcons = [
-    ...data.projectData.map((coordinate) => ({
-      ...coordinate,
-      size: 15,
-      image: "/home-icon.svg",
-    })),
-    ...mostRecentSolutionCoordinates.map((coordinate) => {
+  const mostRecentSolutionCoordinates = (solutions[0]?.solution || []).map(
+    (coordinate) => {
       const { x, y } = coordinate;
       return {
         x,
         y,
         size: 20,
         image: "/cell-tower.svg",
+        canRemove: true,
       };
-    }),
+    }
+  );
+
+  const initialIcons = [
+    ...data.projectData.map((coordinate) => ({
+      ...coordinate,
+      size: 15,
+      image: "/home-icon.svg",
+      canRemove: false,
+    })),
+    ...mostRecentSolutionCoordinates,
   ];
 
   return (
@@ -59,7 +63,11 @@ const CoordinateGridContainer = ({ data }) => {
           onOpen={onOpen}
         />
       </Box>
-      <ModifyProposalModal isOpen={isOpen} onClose={onClose} />
+      <ModifyProposalModal
+        isOpen={isOpen}
+        onClose={onClose}
+        mostRecentSolutionCoordinates={initialIcons}
+      />
 
       {currentPhase !== CoordinateGridPhases.PREDICTION && (
         <LearningResources data={data} />

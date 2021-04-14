@@ -7,23 +7,33 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-  useDisclosure,
 } from "@chakra-ui/react";
+import ModifyProposalGrid from "templates/components/ModifyProposalGrid";
 
-const ModifyProposalModal = ({ isOpen, onClose }) => {
+const ModifyProposalModal = ({
+  isOpen,
+  onClose,
+  mostRecentSolutionCoordinates,
+}) => {
   return (
-    <Modal isOpen={isOpen} onClose={onClose}>
+    <Modal isOpen={isOpen} onClose={onClose} size="4xl">
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>Modal Title</ModalHeader>
+        <ModalHeader>Modify Proposal</ModalHeader>
         <ModalCloseButton />
-        <ModalBody>Hey all!</ModalBody>
+        <ModalBody>
+          <ModifyProposalGrid
+            mostRecentSolutionCoordinates={mostRecentSolutionCoordinates}
+          />
+        </ModalBody>
 
         <ModalFooter>
-          <Button onClose={onClose} colorScheme="blue" mr={3}>
-            Close
+          <Button colorScheme="teal" mr={4}>
+            Submit
           </Button>
-          <Button variant="ghost">Secondary Action</Button>
+          <Button onClick={onClose} colorScheme="red" mr={4}>
+            Cancel
+          </Button>
         </ModalFooter>
       </ModalContent>
     </Modal>
