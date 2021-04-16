@@ -10,6 +10,7 @@ import ModifyProposalModal from "templates/components/ModifyProposalModal";
 import LearningResources from "templates/components/LearningResources";
 
 const CoordinateGridContainer = ({ data }) => {
+  // This will be API call in the future
   const submittedSolutions =
     (window && JSON.parse(window.localStorage.getItem("solutions"))) || [];
   const [solutions, setSolutions] = useState(submittedSolutions);

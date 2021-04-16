@@ -1,10 +1,8 @@
 import {
-  Button,
   Modal,
   ModalOverlay,
   ModalContent,
   ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react";
@@ -26,15 +24,6 @@ const ModifyProposalModal = ({
             mostRecentSolutionCoordinates={mostRecentSolutionCoordinates}
           />
         </ModalBody>
-
-        <ModalFooter>
-          <Button colorScheme="teal" mr={4}>
-            Submit
-          </Button>
-          <Button onClick={onClose} colorScheme="red" mr={4}>
-            Cancel
-          </Button>
-        </ModalFooter>
       </ModalContent>
     </Modal>
   );

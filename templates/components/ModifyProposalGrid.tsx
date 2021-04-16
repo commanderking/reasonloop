@@ -1,8 +1,9 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import { CoordinateGrid } from "open-math-tools";
 import { useState } from "react";
 import _ from "lodash";
-import { ProposalSubmitButton } from "templates/components/ProposalSubmitButton";
+import { submitProposal } from "templates/coordinategrid/requests";
+import { useRouter } from "next/router";
 
 const CoordinateGridActions = {
   ADD_ICON: "ADD_ICON",
@@ -10,6 +11,9 @@ const CoordinateGridActions = {
 };
 
 const ModifyProposalGrid = ({ mostRecentSolutionCoordinates }) => {
+  const router = useRouter();
+  const { projectId } = router.query;
+
   const [activeIcons, setActiveIcons] = useState(mostRecentSolutionCoordinates);
   const [activity, setActivity] = useState([]);
 
@@ -30,6 +34,8 @@ const ModifyProposalGrid = ({ mostRecentSolutionCoordinates }) => {
     ]);
   };
 
+  console.log("projectId", projectId);
+
   return (
     <Box>
       <Box width={500} margin="auto">
@@ -40,6 +46,9 @@ const ModifyProposalGrid = ({ mostRecentSolutionCoordinates }) => {
           activeIcons={activeIcons}
           onIconClick={handleIconClick}
           addableIcon={{
+            // These don't matter when using activeIcons (so need to edit library)
+            image: "/cell-tower.svg",
+            size: 20,
             onAddIcon: (icon) => {
               const { x, y } = icon;
 
@@ -53,7 +62,6 @@ const ModifyProposalGrid = ({ mostRecentSolutionCoordinates }) => {
               };
 
               setActiveIcons([...activeIcons, addedIconInfo]);
-              console.log("activeIcons", activeIcons);
               setActivity([
                 ...activity,
                 { ...addedIconInfo, type: CoordinateGridActions.ADD_ICON },
@@ -62,11 +70,22 @@ const ModifyProposalGrid = ({ mostRecentSolutionCoordinates }) => {
           }}
         />
       </Box>
-      {/* <ProposalSubmitButton
-        addedIcons={addedIcons}
-        currentPhase={currentPhase}
-        onOpen={onOpen}
-      /> */}
+      <Box textAlign="center">
+        <Button
+          onClick={() => {
+            submitProposal({
+              // If icon can be removed, that means it was added by the user
+              // This might cause trouble later so might want to think about a better approach
+              addedIcons: activeIcons.filter((icon) => icon.canRemove),
+              activity,
+              projectId,
+            });
+          }}
+          colorScheme="teal"
+        >
+          Submit
+        </Button>
+      </Box>
     </Box>
   );
 };
