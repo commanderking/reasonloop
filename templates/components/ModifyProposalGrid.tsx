@@ -34,8 +34,6 @@ const ModifyProposalGrid = ({ mostRecentSolutionCoordinates }) => {
     ]);
   };
 
-  console.log("projectId", projectId);
-
   return (
     <Box>
       <Box width={500} margin="auto">
