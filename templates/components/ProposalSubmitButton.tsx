@@ -1,4 +1,6 @@
-import { Box, Button, useDisclosure } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
+import { submitProposal } from "templates/coordinategrid/requests";
+import { useRouter } from "next/router";
 
 const getSubmitButtonText = (currentPhase) => {
   if (currentPhase === "PREDICTION") {
@@ -8,35 +10,23 @@ const getSubmitButtonText = (currentPhase) => {
   return "Modify Proposal";
 };
 
-const getOnClick = (addedIcons, currentPhase, onOpen) => {
+const getOnClick = (addedIcons, currentPhase, projectId, onOpen) => {
   if (currentPhase !== "PREDICTION") {
     console.log("correct opening");
     return onOpen;
   }
 
   return () => {
-    const solution = {
-      solution: addedIcons,
-    };
-
-    // TODO: This is placeholder for real submit behavior (leveraging local storage)
-    if (window) {
-      window.localStorage.setItem(
-        "solutions",
-        JSON.stringify([
-          ...(JSON.parse(window.localStorage.getItem("solutions")) || []),
-          solution,
-        ])
-      );
-      location.reload();
-    }
+    submitProposal({ addedIcons, activity: [], projectId });
   };
 };
 
 export const ProposalSubmitButton = ({ addedIcons, currentPhase, onOpen }) => {
+  const router = useRouter();
+  const { projectId } = router.query;
   return (
     <Box textAlign="center">
-      <Button onClick={getOnClick(addedIcons, currentPhase, onOpen)}>
+      <Button onClick={getOnClick(addedIcons, currentPhase, projectId, onOpen)}>
         {getSubmitButtonText(currentPhase)}
       </Button>
     </Box>

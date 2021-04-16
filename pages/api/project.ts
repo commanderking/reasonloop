@@ -31,7 +31,8 @@ const mockProjectData = {
       solutionPrompt: "What are your initial thoughts?",
     },
     MODIFIED_PROPOSAL: {
-      solutionPrompt: "MODIFIED PROPOSAL DESCRIPTION",
+      instructions:
+        "Let's see what other members of the community have submitted",
     },
     FINAL_SOLUTION: {
       solutionPrompt: "FINAL SOLUTION PROPOSAL",
