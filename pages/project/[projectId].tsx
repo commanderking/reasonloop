@@ -1,40 +1,8 @@
 import Container from "templates/coordinategrid/Container";
 import useSWR from "swr";
 
-const fetcher = (args) => fetch(args).then((res) => res.json());
-
-const getCompletedSolutions = (
-  studentId: string,
-  number: number,
-  isMock: boolean
-) => {
-  if (isMock) {
-    return [
-      {
-        solution: [
-          { x: -6, y: -7, timestamp: 1617668002942 },
-          { x: 0, y: 0, timestamp: 1617668004013 },
-          { x: 4, y: 5, timestamp: 1617668004675 },
-        ],
-      },
-      {
-        solution: [
-          { x: -6, y: -7, timestamp: 1617668002942 },
-          { x: 0, y: 0, timestamp: 1617668004013 },
-          { x: 4, y: 5, timestamp: 1617668004675 },
-        ],
-      },
-      {
-        solution: [
-          { x: -6, y: -7, timestamp: 1617668002942 },
-          { x: 0, y: 0, timestamp: 1617668004013 },
-          { x: 4, y: 5, timestamp: 1617668004675 },
-        ],
-      },
-    ].slice(0, number);
-  }
-
-  return;
+const fetcher = (args) => {
+  return fetch(args).then((res) => res.json());
 };
 
 const ProjectPage = () => {

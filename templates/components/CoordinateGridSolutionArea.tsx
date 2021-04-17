@@ -42,7 +42,7 @@ const CoordinateGridSolutionArea = ({
     return {
       addableIcon: {
         image: "/cell-tower.svg",
-        size: 20,
+        size: 15,
         onAddIcon: (icon) => {
           const { x, y } = icon;
 
@@ -60,11 +60,11 @@ const CoordinateGridSolutionArea = ({
 
   return (
     <Box>
-      <Box width={500} margin="auto">
+      <Box width={400} margin="auto">
         <CoordinateGrid
           id="coordinate grid"
-          gridHeight={500}
-          gridWidth={500}
+          gridHeight={400}
+          gridWidth={400}
           initialIcons={initialIcons}
           onIconClick={handleIconClick}
           {...getAddableIconProp(isEditable)}

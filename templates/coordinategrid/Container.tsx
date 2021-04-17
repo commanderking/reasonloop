@@ -8,6 +8,7 @@ import ProjectDescription from "templates/components/ProjectDescription";
 import PhaseCompletionPrompt from "templates/components/PhaseCompletionPrompt";
 import ModifyProposalModal from "templates/components/ModifyProposalModal";
 import LearningResources from "templates/components/LearningResources";
+import PeerReview from "templates/components/PeerReview";
 
 const CoordinateGridContainer = ({ data }) => {
   // This will be API call in the future
@@ -73,6 +74,7 @@ const CoordinateGridContainer = ({ data }) => {
       {currentPhase !== CoordinateGridPhases.PREDICTION && (
         <LearningResources data={data} />
       )}
+      <PeerReview />
     </Box>
   );
 };

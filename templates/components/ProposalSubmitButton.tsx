@@ -12,7 +12,6 @@ const getSubmitButtonText = (currentPhase) => {
 
 const getOnClick = (addedIcons, currentPhase, projectId, onOpen) => {
   if (currentPhase !== "PREDICTION") {
-    console.log("correct opening");
     return onOpen;
   }
 
