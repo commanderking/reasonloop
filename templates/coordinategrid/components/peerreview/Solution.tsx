@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
-import CoordinateGridSolutionArea from "templates/components/CoordinateGridSolutionArea";
+import CoordinateGridSolutionArea from "templates/coordinategrid/components/CoordinateGridSolutionArea";
 
 const Solution = ({ allPlacedCoordinates }) => {
   return (

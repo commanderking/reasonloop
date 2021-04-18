@@ -1,18 +1,18 @@
 import { useState } from "react";
 import { Box, Heading, useDisclosure } from "@chakra-ui/react";
-import CoordinateGridSolutionArea from "templates/components/CoordinateGridSolutionArea";
-import SolutionAreaDescription from "templates/components/SolutionAreaDescription";
+import CoordinateGridSolutionArea from "templates/coordinategrid/components/CoordinateGridSolutionArea";
+import SolutionAreaDescription from "templates/coordinategrid/components/SolutionAreaDescription";
 import {
   getCurrentPhase,
   getDefaultIconCoordinates,
   getPlacedIconCoordinates,
 } from "templates/coordinategrid/utils";
 import { CoordinateGridPhases } from "templates/coordinategrid/constants";
-import ProjectDescription from "templates/components/ProjectDescription";
-import PhaseCompletionPrompt from "templates/components/PhaseCompletionPrompt";
-import ModifyProposalModal from "templates/components/ModifyProposalModal";
-import LearningResources from "templates/components/LearningResources";
-import PeerReview from "templates/components/peerreview/Container";
+import ProjectDescription from "templates/coordinategrid/components/ProjectDescription";
+import PhaseCompletionPrompt from "templates/coordinategrid/components/PhaseCompletionPrompt";
+import ModifyProposalModal from "templates/coordinategrid/components/ModifyProposalModal";
+import LearningResources from "templates/coordinategrid/components/LearningResources";
+import PeerReview from "templates/coordinategrid/components/peerreview/Container";
 
 const CoordinateGridContainer = ({ data }) => {
   // This will be API call in the future

@@ -2,10 +2,8 @@ import useSWR from "swr";
 import { Box, Heading, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import Solution from "./Solution";
-import {
-  getDefaultIconCoordinates,
-  getPlacedIconsForSolution,
-} from "templates/coordinategrid/utils";
+import { getPlacedIconsForSolution } from "templates/coordinategrid/utils";
+import PeerReviewReactions from "components/reactions/PeerReviewReactions";
 
 const fetcher = (args) => fetch(args).then((res) => res.json());
 
@@ -16,8 +14,6 @@ const PeerProposalReview = ({ projectDefaultCoordinates }) => {
     projectId ? [`/api/solutions/${projectId}`] : null,
     fetcher
   );
-
-  console.log("data", data);
 
   if (!data) {
     return <div>Loading Proposals</div>;
@@ -40,7 +36,9 @@ const PeerProposalReview = ({ projectDefaultCoordinates }) => {
         return (
           <Box>
             <Heading fontSize="lg">Proposal</Heading>
+
             <Solution allPlacedCoordinates={allPlacedCoordinates} />
+            <PeerReviewReactions />
           </Box>
         );
       })}

@@ -6,7 +6,7 @@ import {
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react";
-import ModifyProposalGrid from "templates/components/ModifyProposalGrid";
+import ModifyProposalGrid from "templates/coordinategrid/components/ModifyProposalGrid";
 
 const ModifyProposalModal = ({
   isOpen,

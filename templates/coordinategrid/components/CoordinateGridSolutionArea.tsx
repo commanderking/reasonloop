@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react";
 import { CoordinateGrid } from "open-math-tools";
 import { useState } from "react";
 import _ from "lodash";
-import { ProposalSubmitButton } from "templates/components/ProposalSubmitButton";
+import { ProposalSubmitButton } from "templates/coordinategrid/components/ProposalSubmitButton";
 import { Phase } from "templates/types";
 
 const CoordinateGridActions = {
