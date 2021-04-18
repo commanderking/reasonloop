@@ -17,6 +17,7 @@ type Props = {
   isEditable?: boolean;
   currentPhase?: Phase;
   onOpen?: any;
+  margin?: string;
 };
 
 const CoordinateGridSolutionArea = ({
@@ -25,6 +26,7 @@ const CoordinateGridSolutionArea = ({
   isEditable = true,
   currentPhase,
   onOpen,
+  margin = "auto",
 }: Props) => {
   const [addedIcons, setAddedIcons] = useState(initialAddedIcons);
 
@@ -70,7 +72,7 @@ const CoordinateGridSolutionArea = ({
 
   return (
     <Box>
-      <Box width={400} margin="auto">
+      <Box width={400} margin={margin}>
         <CoordinateGrid
           id="coordinate grid"
           gridHeight={400}

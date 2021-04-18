@@ -8,6 +8,7 @@ const Solution = ({ allPlacedCoordinates }) => {
       <CoordinateGridSolutionArea
         initialIcons={allPlacedCoordinates}
         isEditable={false}
+        margin="inherit"
       />
     </Box>
   );

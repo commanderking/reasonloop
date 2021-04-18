@@ -37,7 +37,12 @@ const PeerProposalReview = ({ projectDefaultCoordinates }) => {
           ...getPlacedIconsForSolution(proposedSolution.solution),
         ];
 
-        return <Solution allPlacedCoordinates={allPlacedCoordinates} />;
+        return (
+          <Box>
+            <Heading fontSize="lg">Proposal</Heading>
+            <Solution allPlacedCoordinates={allPlacedCoordinates} />
+          </Box>
+        );
       })}
     </Box>
   );
