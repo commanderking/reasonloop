@@ -26,13 +26,7 @@ export const getPlacedIconsForSolution = (solution) => {
 
 export const getPlacedIconCoordinates = (userSolutions) => {
   return getPlacedIconsForSolution(userSolutions[0]?.solution || []);
-  // return (userSolutions[0]?.solution || []).map(getPlacedIconsForSolution);
 };
-
-export const getAllPlacedCoordinates = (
-  defaultCoordinates,
-  userPlacedCoordinates
-) => {};
 
 export const getCurrentPhase = (solutions): Phase => {
   if (!solutions.length) {
