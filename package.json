@@ -17,7 +17,8 @@
     "open-math-tools": "^0.5.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "swr": "^0.5.5"
+    "swr": "^0.5.5",
+    "zustand": "^3.4.1"
   },
   "devDependencies": {
     "@types/node": "^14.14.31",

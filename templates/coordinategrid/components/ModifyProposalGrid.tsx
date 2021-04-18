@@ -36,11 +36,11 @@ const ModifyProposalGrid = ({ mostRecentSolutionCoordinates }) => {
 
   return (
     <Box>
-      <Box width={500} margin="auto">
+      <Box width={400} margin="auto">
         <CoordinateGrid
           id="coordinate grid"
-          gridHeight={500}
-          gridWidth={500}
+          gridHeight={400}
+          gridWidth={400}
           activeIcons={activeIcons}
           onIconClick={handleIconClick}
           addableIcon={{
