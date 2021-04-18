@@ -6,13 +6,11 @@ const solutions = [
     studentId: "abc-123",
     author: "STUDENT",
     solution: [
-      [
-        { x: -6, y: -2 },
-        { x: 4, y: -1 },
-        { x: 3, y: 6 },
-        { x: -6, y: 7 },
-        { x: 7, y: -6 },
-      ],
+      { x: -6, y: -2 },
+      { x: 4, y: -1 },
+      { x: 3, y: 6 },
+      { x: -6, y: 7 },
+      { x: 7, y: -6 },
     ],
   },
   {

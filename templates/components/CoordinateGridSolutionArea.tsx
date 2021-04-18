@@ -3,19 +3,29 @@ import { CoordinateGrid } from "open-math-tools";
 import { useState } from "react";
 import _ from "lodash";
 import { ProposalSubmitButton } from "templates/components/ProposalSubmitButton";
+import { Phase } from "templates/types";
 
 const CoordinateGridActions = {
   ADD_ICON: "ADD_ICON",
   REMOVE_ICON: "REMOVE_ICON",
 };
 
+// TODO" Update Prop Types
+type Props = {
+  initialIcons: any[];
+  initialAddedIcons?: any[];
+  isEditable?: boolean;
+  currentPhase?: Phase;
+  onOpen?: any;
+};
+
 const CoordinateGridSolutionArea = ({
   initialIcons,
   initialAddedIcons,
-  isEditable,
+  isEditable = true,
   currentPhase,
   onOpen,
-}) => {
+}: Props) => {
   const [addedIcons, setAddedIcons] = useState(initialAddedIcons);
 
   const [activity, setActivity] = useState([]);
@@ -70,11 +80,13 @@ const CoordinateGridSolutionArea = ({
           {...getAddableIconProp(isEditable)}
         />
       </Box>
-      <ProposalSubmitButton
-        addedIcons={addedIcons}
-        currentPhase={currentPhase}
-        onOpen={onOpen}
-      />
+      {onOpen && currentPhase && (
+        <ProposalSubmitButton
+          addedIcons={addedIcons}
+          currentPhase={currentPhase}
+          onOpen={onOpen}
+        />
+      )}
     </Box>
   );
 };
