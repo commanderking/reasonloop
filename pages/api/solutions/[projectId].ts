@@ -38,6 +38,5 @@ const solutions = [
 ];
 
 export default (req, res) => {
-  console.log("reqbody", req.body);
   res.status(200).json(solutions);
 };
