@@ -2,7 +2,7 @@ import create from "zustand";
 
 export const useStore = create((set) => {
   return {
-    reactions: [],
-    setReactions: (reactions) => set({ reactions }),
+    currentFeedback: [],
+    setCurrentFeedback: (feedback) => set({ feedback }),
   };
 });
