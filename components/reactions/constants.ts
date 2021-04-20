@@ -20,3 +20,5 @@ export const reactions = {
     emoji: "💭",
   },
 };
+
+export const reactionIds = Object.keys(reactions);
