@@ -13,7 +13,6 @@ const EmojiButton = ({
   buttonProps,
   isClicked = false,
 }: Props) => {
-  console.log("isClicked", isClicked);
   return (
     <Button
       colorScheme="teal"

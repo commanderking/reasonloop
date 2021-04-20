@@ -1,5 +1,4 @@
 import { Box, Text, Textarea } from "@chakra-ui/react";
-import _ from "lodash";
 
 const Comment = ({ comment, handleCommentChange }) => {
   return (

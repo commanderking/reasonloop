@@ -35,8 +35,7 @@ const Solution = ({ allPlacedCoordinates }) => {
   };
 
   const handleCommentChange = (e) => {
-    let inputValue = e.target.value;
-    setComment(inputValue);
+    setComment(e.target.value);
   };
 
   if (hasSubmitted) {
