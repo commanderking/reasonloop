@@ -10,10 +10,12 @@ import {
 
 const LearningResources = ({ data }) => {
   return (
-    <Box>
+    <Box mt={8} mb={8}>
       <Heading fontSize="2xl">Learn</Heading>
-      <Text>Some learning resources that might help you solve the project</Text>
-      <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+      <Text mt={4}>
+        Some learning resources that might help you solve the project
+      </Text>
+      <Grid templateColumns="repeat(2, 1fr)" gap={6} mt={4}>
         {data.resources.map((resource) => {
           return (
             <GridItem key={resource.title}>
@@ -24,10 +26,11 @@ const LearningResources = ({ data }) => {
                 borderWidth="1px"
                 rounded="md"
               >
-                <LinkOverlay href={resource.href}>
-                  <Text fontSize="xl">{resource.title}</Text>
-                </LinkOverlay>
-
+                <Heading size="md">
+                  <LinkOverlay href={resource.url} isExternal>
+                    {resource.title}
+                  </LinkOverlay>
+                </Heading>
                 <Text>{resource.description}</Text>
               </LinkBox>
             </GridItem>

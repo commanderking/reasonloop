@@ -18,7 +18,7 @@ const initialReactionStates = reactionIds.reduce(
   {}
 );
 
-const Solution = ({ allPlacedCoordinates }) => {
+const Solution = ({ allPlacedCoordinates, proposalNumber }) => {
   const router = useRouter();
   const { projectId } = router.query;
 
@@ -51,7 +51,7 @@ const Solution = ({ allPlacedCoordinates }) => {
 
   return (
     <Box>
-      <Heading fontSize="lg">Review Proposal</Heading>
+      <Heading fontSize="lg">Review Proposal {proposalNumber} </Heading>
       <CoordinateGridSolutionArea
         initialIcons={allPlacedCoordinates}
         isEditable={false}

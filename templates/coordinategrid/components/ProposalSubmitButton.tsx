@@ -1,10 +1,16 @@
 import { Box, Button } from "@chakra-ui/react";
 import { submitProposal } from "templates/coordinategrid/requests";
+import { CoordinateGridPhases } from "templates/coordinategrid/constants";
+
 import { useRouter } from "next/router";
 
 const getSubmitButtonText = (currentPhase) => {
-  if (currentPhase === "PREDICTION") {
+  if (currentPhase === CoordinateGridPhases.PREDICTION) {
     return "Submit Prediction";
+  }
+
+  if (currentPhase === CoordinateGridPhases.FIRST_PROPOSAL) {
+    return "Ready to Submit First Proposal";
   }
 
   return "Modify Proposal";
@@ -24,8 +30,11 @@ export const ProposalSubmitButton = ({ addedIcons, currentPhase, onOpen }) => {
   const router = useRouter();
   const { projectId } = router.query;
   return (
-    <Box textAlign="center">
-      <Button onClick={getOnClick(addedIcons, currentPhase, projectId, onOpen)}>
+    <Box>
+      <Button
+        colorScheme="teal"
+        onClick={getOnClick(addedIcons, currentPhase, projectId, onOpen)}
+      >
         {getSubmitButtonText(currentPhase)}
       </Button>
     </Box>

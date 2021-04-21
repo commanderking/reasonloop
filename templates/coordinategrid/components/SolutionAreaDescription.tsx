@@ -10,7 +10,7 @@ const fontSize = "2xl";
 
 export const SolutionAreaDescription = ({ currentPhase }: Props) => {
   return (
-    <Box textAlign="center">
+    <Box>
       {currentPhase === PREDICTION && (
         <Heading fontSize={fontSize}>What are your initial thoughts?</Heading>
       )}

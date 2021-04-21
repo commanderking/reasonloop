@@ -3,11 +3,11 @@ const mockProjectData = {
   name: "Project - Cell Towers in Camden, NJ",
   avatar: "robot_1",
   overviewText:
-    "Government officials of the new Martian outpost are determining how many cell towers are required to cover the needs of their residents. Houses within 4 kilometers of each cell tower can receive cell coverage. How many cell towers should they build and where?",
+    "Government officials in Camden, NJ are determining how many cell towers are required to cover the needs of their residents. Houses within 4 kilometers of each cell tower can receive cell coverage. How many cell towers should they build and where?",
   requirements: [
     "Each unit on the map represents 1 km ",
     "Each house represents a small neighborhood with 20-30 households",
-    "Residents have written to the governor that they prefer cell towers be built at least 1 km away from their neighborhood.",
+    "Residents prefer cell towers be built at least 1 km away from their neighborhood.",
   ],
   projectType: "COORDINATE_GRID",
   projectData: [
@@ -27,7 +27,7 @@ const mockProjectData = {
     },
     FIRST_PROPOSAL: {
       instructions:
-        "Nice! You've submitted your initial thoughts. As a next step, review some of the skills that might be helpful to helping your proposal. When you're ready, feel free to submit your first proposal.",
+        "Nice! You've submitted your initial thoughts. As a next step, review some of the skills that might help you improve on your initial proposal. When you're ready, submit your first proposal. Don't worry about getting it perfect. You'll have the chance to modify it!",
       solutionPrompt: "What are your initial thoughts?",
     },
     MODIFIED_PROPOSAL: {
