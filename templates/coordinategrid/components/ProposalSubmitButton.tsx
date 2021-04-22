@@ -13,7 +13,7 @@ const getSubmitButtonText = (currentPhase) => {
     return "Edit";
   }
 
-  return "Modify Proposal";
+  return "Edit";
 };
 
 const getOnClick = (addedIcons, currentPhase, projectId, onOpen) => {

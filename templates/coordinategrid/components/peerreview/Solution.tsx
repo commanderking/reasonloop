@@ -50,12 +50,12 @@ const Solution = ({ allPlacedCoordinates, proposalNumber }) => {
   }
 
   return (
-    <Box>
+    <Box textAlign="center">
       <Heading fontSize="lg">Review Proposal {proposalNumber} </Heading>
       <CoordinateGridSolutionArea
         initialIcons={allPlacedCoordinates}
         isEditable={false}
-        margin="inherit"
+        margin="auto"
       />
       <PeerReviewReactions
         currentReactions={reactions}
@@ -63,6 +63,7 @@ const Solution = ({ allPlacedCoordinates, proposalNumber }) => {
       />
       <Comment comment={comment} handleCommentChange={handleCommentChange} />
       <Button
+        colorScheme="teal"
         onClick={() => {
           const feedback = {
             // TODO: inject studentId
