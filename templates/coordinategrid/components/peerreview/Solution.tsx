@@ -18,7 +18,7 @@ const initialReactionStates = reactionIds.reduce(
   {}
 );
 
-const Solution = ({ allPlacedCoordinates }) => {
+const Solution = ({ allPlacedCoordinates, proposalNumber }) => {
   const router = useRouter();
   const { projectId } = router.query;
 
@@ -50,12 +50,12 @@ const Solution = ({ allPlacedCoordinates }) => {
   }
 
   return (
-    <Box>
-      <Heading fontSize="lg">Review Proposal</Heading>
+    <Box textAlign="center">
+      <Heading fontSize="lg">Review Proposal {proposalNumber} </Heading>
       <CoordinateGridSolutionArea
         initialIcons={allPlacedCoordinates}
         isEditable={false}
-        margin="inherit"
+        margin="auto"
       />
       <PeerReviewReactions
         currentReactions={reactions}
@@ -63,6 +63,7 @@ const Solution = ({ allPlacedCoordinates }) => {
       />
       <Comment comment={comment} handleCommentChange={handleCommentChange} />
       <Button
+        colorScheme="teal"
         onClick={() => {
           const feedback = {
             // TODO: inject studentId

@@ -38,6 +38,6 @@ export const getCurrentPhase = (solutions): Phase => {
   }
 
   if (solutions.length >= 2) {
-    return CoordinateGridPhases.MODIFIED_PROPOSAL;
+    return CoordinateGridPhases.MODIFY_PROPOSAL;
   }
 };

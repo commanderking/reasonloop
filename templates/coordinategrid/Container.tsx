@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Box, Heading, useDisclosure } from "@chakra-ui/react";
+import { Fragment, useState } from "react";
+import { Box, Heading, useDisclosure, Divider, Button } from "@chakra-ui/react";
 import CoordinateGridSolutionArea from "templates/coordinategrid/components/CoordinateGridSolutionArea";
 import SolutionAreaDescription from "templates/coordinategrid/components/SolutionAreaDescription";
 import {
@@ -24,7 +24,6 @@ const CoordinateGridContainer = ({ data }) => {
 
   const currentPhase = getCurrentPhase(userSolutions);
 
-  console.log("data", data.projectData);
   const projectDefaultCoordinates = getDefaultIconCoordinates(data.projectData);
 
   const mostRecentSolutionCoordinates = getPlacedIconCoordinates(userSolutions);
@@ -36,17 +35,25 @@ const CoordinateGridContainer = ({ data }) => {
 
   return (
     <Box>
-      <Box>Current Phase: {currentPhase}</Box>
       <Box>
         <Heading>{data.name}</Heading>
       </Box>
 
-      <PhaseCompletionPrompt data={data} currentPhase={currentPhase} />
-      {currentPhase === CoordinateGridPhases.PREDICTION && (
-        <ProjectDescription data={data} />
-      )}
-
       <Box mt={8}>
+        <PhaseCompletionPrompt data={data} currentPhase={currentPhase} />
+        {currentPhase === CoordinateGridPhases.PREDICTION && (
+          <ProjectDescription data={data} />
+        )}
+      </Box>
+
+      <Box
+        padding={8}
+        mt={8}
+        ml={20}
+        mr={20}
+        textAlign="center"
+        border="1px solid lightgray"
+      >
         <SolutionAreaDescription currentPhase={currentPhase} />
         <CoordinateGridSolutionArea
           isEditable={currentPhase === CoordinateGridPhases.PREDICTION}
@@ -54,20 +61,28 @@ const CoordinateGridContainer = ({ data }) => {
           initialAddedIcons={mostRecentSolutionCoordinates}
           currentPhase={currentPhase}
           onOpen={onOpen}
+          margin={"auto"}
         />
+      </Box>
+
+      <Box mt={8}>
+        {currentPhase === CoordinateGridPhases.MODIFY_PROPOSAL && (
+          <PeerReview projectDefaultCoordinates={projectDefaultCoordinates} />
+        )}
+
+        {currentPhase !== CoordinateGridPhases.PREDICTION && (
+          <Fragment>
+            <LearningResources data={data} />
+            <Divider mt={8} />
+          </Fragment>
+        )}
       </Box>
       <ModifyProposalModal
         isOpen={isOpen}
+        currentPhase={currentPhase}
         onClose={onClose}
         mostRecentSolutionCoordinates={allIcons}
       />
-
-      {currentPhase !== CoordinateGridPhases.PREDICTION && (
-        <LearningResources data={data} />
-      )}
-      {currentPhase === CoordinateGridPhases.MODIFIED_PROPOSAL && (
-        <PeerReview projectDefaultCoordinates={projectDefaultCoordinates} />
-      )}
     </Box>
   );
 };

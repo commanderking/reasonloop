@@ -26,7 +26,7 @@ const CoordinateGridSolutionArea = ({
   isEditable = true,
   currentPhase,
   onOpen,
-  margin = "auto",
+  margin,
 }: Props) => {
   const [addedIcons, setAddedIcons] = useState(initialAddedIcons);
 
@@ -78,7 +78,7 @@ const CoordinateGridSolutionArea = ({
           gridHeight={400}
           gridWidth={400}
           initialIcons={initialIcons}
-          onIconClick={handleIconClick}
+          onIconClick={isEditable ? handleIconClick : () => {}}
           {...getAddableIconProp(isEditable)}
         />
       </Box>

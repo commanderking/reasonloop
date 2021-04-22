@@ -5,8 +5,8 @@ import { reactions } from "components/reactions/constants";
 
 const PeerReviewReactions = ({ onReactionClick, currentReactions }) => {
   return (
-    <Box display="inline-block" padding={2}>
-      <Text display="inline-block" mr={4}>
+    <Box padding={2}>
+      <Text display="inline-block" mr={2}>
         Reactions
       </Text>
       {Object.values(reactions).map((reaction) => {
@@ -15,7 +15,10 @@ const PeerReviewReactions = ({ onReactionClick, currentReactions }) => {
         return (
           <EmojiButton
             isClicked={isClicked}
-            buttonProps={{ onClick: onReactionClick, value: id }}
+            buttonProps={{
+              onClick: onReactionClick,
+              value: id,
+            }}
             label="checkMark"
           >
             {reaction.emoji}

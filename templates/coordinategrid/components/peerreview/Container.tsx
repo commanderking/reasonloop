@@ -18,7 +18,7 @@ const PeerProposalReview = ({ projectDefaultCoordinates }) => {
     return <div>Loading Proposals</div>;
   }
   return (
-    <Box>
+    <Box padding={8}>
       <Heading fontSize="2xl">Review Community Proposals</Heading>
       <Text>
         Below are proposals from other members of your community. Take a look!
@@ -26,7 +26,7 @@ const PeerProposalReview = ({ projectDefaultCoordinates }) => {
         Or maybe one of the proposals might convince you to modify your own
         proposal.
       </Text>
-      {data.map((proposedSolution) => {
+      {data.map((proposedSolution, index) => {
         const allPlacedCoordinates = [
           ...projectDefaultCoordinates,
           ...getPlacedIconsForSolution(proposedSolution.solution),
@@ -38,9 +38,12 @@ const PeerProposalReview = ({ projectDefaultCoordinates }) => {
             padding={8}
             border="1px solid lightgray"
             borderRadius={5}
-            mt={20}
+            mt={8}
           >
-            <Solution allPlacedCoordinates={allPlacedCoordinates} />
+            <Solution
+              allPlacedCoordinates={allPlacedCoordinates}
+              proposalNumber={index + 1}
+            />
           </Box>
         );
       })}
