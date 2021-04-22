@@ -30,9 +30,9 @@ const mockProjectData = {
         "Nice! You've submitted your initial thoughts. As a next step, review some of the skills that might help you improve on your initial proposal. When you're ready, submit your first proposal. Don't worry about getting it perfect. You'll have the chance to modify it!",
       solutionPrompt: "What are your initial thoughts?",
     },
-    MODIFIED_PROPOSAL: {
+    MODIFY_PROPOSAL: {
       instructions:
-        "Let's see what other members of the community have submitted",
+        "Your peers and members of the community have also submitted proposals. Help review them to see whether they're on the right track. They might also give you ideas for how to improve your own proposal.",
     },
     FINAL_SOLUTION: {
       solutionPrompt: "FINAL SOLUTION PROPOSAL",

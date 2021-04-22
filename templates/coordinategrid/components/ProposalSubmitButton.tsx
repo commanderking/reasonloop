@@ -10,7 +10,7 @@ const getSubmitButtonText = (currentPhase) => {
   }
 
   if (currentPhase === CoordinateGridPhases.FIRST_PROPOSAL) {
-    return "Ready to Submit First Proposal";
+    return "Edit";
   }
 
   return "Modify Proposal";

@@ -46,31 +46,36 @@ const CoordinateGridContainer = ({ data }) => {
         )}
       </Box>
 
+      <Box
+        padding={8}
+        mt={8}
+        ml={20}
+        mr={20}
+        textAlign="center"
+        border="1px solid lightgray"
+      >
+        <SolutionAreaDescription currentPhase={currentPhase} />
+        <CoordinateGridSolutionArea
+          isEditable={currentPhase === CoordinateGridPhases.PREDICTION}
+          initialIcons={allIcons}
+          initialAddedIcons={mostRecentSolutionCoordinates}
+          currentPhase={currentPhase}
+          onOpen={onOpen}
+          margin={"auto"}
+        />
+      </Box>
+
       <Box mt={8}>
-        {currentPhase === CoordinateGridPhases.MODIFIED_PROPOSAL && (
+        {currentPhase === CoordinateGridPhases.MODIFY_PROPOSAL && (
           <PeerReview projectDefaultCoordinates={projectDefaultCoordinates} />
         )}
 
         {currentPhase !== CoordinateGridPhases.PREDICTION && (
           <Fragment>
             <LearningResources data={data} />
-            <Button colorScheme="teal" onClick={onOpen}>
-              Ready to Submit First Proposal
-            </Button>
             <Divider mt={8} />
           </Fragment>
         )}
-
-        <Box mt={4}>
-          <SolutionAreaDescription currentPhase={currentPhase} />
-          <CoordinateGridSolutionArea
-            isEditable={currentPhase === CoordinateGridPhases.PREDICTION}
-            initialIcons={allIcons}
-            initialAddedIcons={mostRecentSolutionCoordinates}
-            currentPhase={currentPhase}
-            onOpen={onOpen}
-          />
-        </Box>
       </Box>
       <ModifyProposalModal
         isOpen={isOpen}

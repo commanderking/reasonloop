@@ -5,6 +5,7 @@ export const PhaseCompletionPrompt = ({ data, currentPhase }) => {
   if (currentPhase === CoordinateGridPhases.PREDICTION) {
     return null;
   }
+
   return (
     <Alert status="info">
       <AlertIcon />
