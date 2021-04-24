@@ -1,8 +1,8 @@
 // Each time student sees 3 other solutions
 
-const solutions = [
+const proposals = [
   {
-    id: "unique-solution-id-1",
+    id: "unique-proposal-id-1",
     studentId: "abc-123",
     author: "STUDENT",
     solution: [
@@ -14,7 +14,7 @@ const solutions = [
     ],
   },
   {
-    id: "unique-solution-id-2",
+    id: "unique-proposal-id-2",
     studentId: "xyz-123",
     author: "STUDENT",
     solution: [
@@ -25,7 +25,7 @@ const solutions = [
     ],
   },
   {
-    id: "unique-solution-id-3",
+    id: "unique-proposal-id-3",
     studentId: null,
     author: "TEACHER",
     solution: [
@@ -38,5 +38,5 @@ const solutions = [
 ];
 
 export default (req, res) => {
-  res.status(200).json(solutions);
+  res.status(200).json(proposals);
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import _ from "lodash";
 import { useRouter } from "next/router";
 import { Box, Button, Heading } from "@chakra-ui/react";
 import { CheckCircleIcon } from "@chakra-ui/icons";
@@ -7,6 +8,7 @@ import PeerReviewReactions from "components/reactions/PeerReviewReactions";
 import Comment from "templates/coordinategrid/components/peerreview/Comment";
 import { useState } from "react";
 import { reactionIds } from "components/reactions/constants";
+import { submitFeedback } from "templates/coordinategrid/requests";
 
 const initialReactionStates = reactionIds.reduce(
   (reactions, currentReaction) => {
@@ -18,9 +20,13 @@ const initialReactionStates = reactionIds.reduce(
   {}
 );
 
-const Solution = ({ allPlacedCoordinates, proposalNumber }) => {
+const Solution = ({
+  allPlacedCoordinates,
+  proposalNumber,
+  proposedSolution,
+}) => {
   const router = useRouter();
-  const { projectId } = router.query;
+  const { projectId, studentId } = router.query;
 
   const [reactions, setReactions] = useState(initialReactionStates);
   const [comment, setComment] = useState([]);
@@ -65,16 +71,16 @@ const Solution = ({ allPlacedCoordinates, proposalNumber }) => {
       <Button
         colorScheme="teal"
         onClick={() => {
-          const feedback = {
-            // TODO: inject studentId
-            studentId: "",
-            projectId,
-            reactions,
-            comment,
-          };
-
           // Mimic call
           setTimeout(() => {
+            submitFeedback({
+              studentId,
+              proposerStudentId: proposedSolution.studentId,
+              projectId,
+              proposalId: proposedSolution.id,
+              comment,
+              reactions: _.pickBy(reactions, Boolean),
+            });
             setHasSubmitted(true);
           }, 500);
         }}

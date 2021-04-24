@@ -21,10 +21,7 @@ const PeerProposalReview = ({ projectDefaultCoordinates }) => {
     <Box padding={8}>
       <Heading fontSize="2xl">Review Community Proposals</Heading>
       <Text>
-        Below are proposals from other members of your community. Take a look!
-        It can be useful to provide feedback to help members of the community.
-        Or maybe one of the proposals might convince you to modify your own
-        proposal.
+        Feel free to review and provide feedback on as many as possible!
       </Text>
       {data.map((proposedSolution, index) => {
         const allPlacedCoordinates = [
@@ -41,6 +38,7 @@ const PeerProposalReview = ({ projectDefaultCoordinates }) => {
             mt={8}
           >
             <Solution
+              proposedSolution={proposedSolution}
               allPlacedCoordinates={allPlacedCoordinates}
               proposalNumber={index + 1}
             />
