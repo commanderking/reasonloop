@@ -14,9 +14,9 @@ const tableData = [
   {
     feature: "Context",
     authentic:
-      "No context or forced context that is not relevant to student's life, culture, or community",
-    typical:
       "Relevant context that draw on student's experiences, culture, or community",
+    typical:
+      "No context or forced context that is not relevant to student's life, culture, or community",
   },
   {
     feature: "Intuition",
@@ -43,8 +43,7 @@ const tableData = [
   },
   {
     feature: "Iteration",
-    authentic:
-      "Students can constantly improve their answer based on feedback and new learning",
+    authentic: "Students can constantly improve their answer based on feedback",
     typical:
       "Students have little chance to improve their answer based on feedback",
   },
