@@ -17,3 +17,30 @@ export const submitProposal = ({ projectId, activity, addedIcons }) => {
     location.reload();
   }
 };
+
+export const submitFeedback = ({
+  projectId,
+  studentId,
+  proposalId,
+  comment,
+  reactions,
+  proposerStudentId,
+}) => {
+  if (window) {
+    const feedback = {
+      projectId,
+      studentId,
+      proposerStudentId,
+      proposalId,
+      comment,
+      reactions,
+    };
+    window.localStorage.setItem(
+      "feedback",
+      JSON.stringify([
+        ...(JSON.parse(window.localStorage.getItem("feedback")) || []),
+        feedback,
+      ])
+    );
+  }
+};
