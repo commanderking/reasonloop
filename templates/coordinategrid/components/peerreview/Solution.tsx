@@ -28,8 +28,6 @@ const Solution = ({
   const router = useRouter();
   const { projectId, studentId } = router.query;
 
-  console.log("studentId", studentId);
-
   const [reactions, setReactions] = useState(initialReactionStates);
   const [comment, setComment] = useState([]);
   const [hasSubmitted, setHasSubmitted] = useState(false);
@@ -45,8 +43,6 @@ const Solution = ({
   const handleCommentChange = (e) => {
     setComment(e.target.value);
   };
-
-  const handleSubmitFeedback = () => {};
 
   if (hasSubmitted) {
     return (
