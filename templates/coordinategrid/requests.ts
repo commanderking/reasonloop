@@ -44,3 +44,16 @@ export const submitFeedback = ({
     );
   }
 };
+
+export const saveCustomProject = (project) => {
+  console.log("in project", project);
+  if (window) {
+    window.localStorage.setItem(
+      "customProjects",
+      JSON.stringify([
+        ...(JSON.parse(window.localStorage.getItem("customProjects")) || []),
+        project,
+      ])
+    );
+  }
+};
