@@ -1,4 +1,4 @@
-import Container from "templates/coordinategrid/Container";
+import Container from "templates/coordinategrid/ContainerEditable";
 import useSWR from "swr";
 
 const fetcher = (args) => {

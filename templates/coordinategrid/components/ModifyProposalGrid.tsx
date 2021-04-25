@@ -10,13 +10,17 @@ const CoordinateGridActions = {
   REMOVE_ICON: "REMOVE_ICON",
 };
 
-const ModifyProposalGrid = ({ mostRecentSolutionCoordinates }) => {
+const ModifyProposalGrid = ({
+  mostRecentSolutionCoordinates,
+  customButton = null,
+}) => {
   const router = useRouter();
   const { projectId } = router.query;
 
   const [activeIcons, setActiveIcons] = useState(mostRecentSolutionCoordinates);
   const [activity, setActivity] = useState([]);
 
+  console.log("activeIcons", activeIcons);
   const handleIconClick = (icon) => {
     if (!icon.canRemove) {
       return;
@@ -68,22 +72,24 @@ const ModifyProposalGrid = ({ mostRecentSolutionCoordinates }) => {
           }}
         />
       </Box>
-      <Box textAlign="center">
-        <Button
-          onClick={() => {
-            submitProposal({
-              // If icon can be removed, that means it was added by the user
-              // This might cause trouble later so might want to think about a better approach
-              addedIcons: activeIcons.filter((icon) => icon.canRemove),
-              activity,
-              projectId,
-            });
-          }}
-          colorScheme="teal"
-        >
-          Submit
-        </Button>
-      </Box>
+      {customButton || (
+        <Box textAlign="center">
+          <Button
+            onClick={() => {
+              submitProposal({
+                // If icon can be removed, that means it was added by the user
+                // This might cause trouble later so might want to think about a better approach
+                addedIcons: activeIcons.filter((icon) => icon.canRemove),
+                activity,
+                projectId,
+              });
+            }}
+            colorScheme="teal"
+          >
+            Submit
+          </Button>
+        </Box>
+      )}
     </Box>
   );
 };

@@ -5,7 +5,7 @@ export const ProjectDescription = ({ data }) => {
     <Box>
       <Box mt={8}>
         <Heading fontSize="2xl">Overview</Heading>
-        <Text>{data.overviewText}</Text>
+        <Text>{data.overview}</Text>
       </Box>
       <Box mt={8}>
         <Heading fontSize="2xl">Details</Heading>
