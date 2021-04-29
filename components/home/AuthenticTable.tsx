@@ -28,30 +28,22 @@ const tableData = [
   {
     feature: "Solutions",
     authentic:
-      "There are multiple reasonable solutions, often times with different tradeoffs",
-    typical: "There is a single correct solution.",
+      "There are multiple ways to solve the problem, and multiple reasonable solutions.",
+    typical:
+      "There is only one way to solve the problem and a single correct solution.",
   },
-  {
-    feature: "Approaches",
-    authentic: "There are multiple ways to solve the problem",
-    typical: "There a single way to solve the problem.",
-  },
+
   {
     feature: "Feedback",
-    authentic: "Students receive feedback from peers.",
-    typical: "Student's answer is right or wrong.",
-  },
-  {
-    feature: "Iteration",
-    authentic: "Students can constantly improve their answer based on feedback",
-    typical:
-      "Students have little chance to improve their answer based on feedback",
+    authentic:
+      "Students receive feedback from peers, and can continually improve on their answers.",
+    typical: "Student's answer is marked right or wrong.",
   },
 ];
 
 const AuthenticTable = () => {
   return (
-    <Table variant="striped" size="sm" maxWidth={600} margin="auto">
+    <Table variant="striped" size="sm" maxWidth={650} margin="auto">
       <Thead>
         <Tr>
           <Th></Th>
@@ -62,23 +54,23 @@ const AuthenticTable = () => {
       <Tbody>
         <Tr>
           <Td></Td>
-          <Td>
+          <Td pt={5} pb={5}>
             <Text as="i" fontSize="sm">
               Where should we build cell towers to provide cellular access to
-              the most residents?
+              the as many residents as possible?
             </Text>
           </Td>
           <Td>
             <Text as="i">
-              Diego's rectangular bedroom is 4 meters by 3 meters. What is the
-              diagonal distance from one corner to the opposite corner?
+              Diego's bedroom is 4 meters by 3 meters. What is the diagonal
+              distance from one corner to the opposite corner?
             </Text>
           </Td>
         </Tr>
         {tableData.map((row) => {
           return (
             <Tr>
-              <Td>
+              <Td pt={10} pb={10}>
                 <Text as="b">{row.feature}</Text>
               </Td>
               <Td>{row.authentic}</Td>
