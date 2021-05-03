@@ -46,7 +46,6 @@ export const submitFeedback = ({
 };
 
 export const saveCustomProject = (project) => {
-  console.log("in project", project);
   if (window) {
     window.localStorage.setItem(
       "customProjects",
@@ -55,5 +54,13 @@ export const saveCustomProject = (project) => {
         project,
       ])
     );
+  }
+};
+
+export const getCustomProjects = () => {
+  if (window) {
+    const customProjects = window.localStorage.getItem("customProjects");
+
+    return JSON.parse(customProjects) || [];
   }
 };

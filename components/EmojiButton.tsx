@@ -15,11 +15,13 @@ const EmojiButton = ({
 }: Props) => {
   return (
     <Button
+      padding={0}
       colorScheme="teal"
-      variant={isClicked ? "solid" : "outline"}
+      border={isClicked ? "5px solid teal" : "5px solid white"}
+      variant={isClicked ? "outline" : "ghost"}
       {...buttonProps}
     >
-      <Text pointerEvents="none" aria-label={label}>
+      <Text fontSize="2xl" pointerEvents="none" aria-label={label}>
         {children}
       </Text>
     </Button>

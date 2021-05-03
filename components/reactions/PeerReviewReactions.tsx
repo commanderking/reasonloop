@@ -18,6 +18,7 @@ const PeerReviewReactions = ({ onReactionClick, currentReactions }) => {
             buttonProps={{
               onClick: onReactionClick,
               value: id,
+              margin: 1,
             }}
             label="checkMark"
           >
