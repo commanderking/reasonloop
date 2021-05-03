@@ -3,7 +3,6 @@ import { getCustomProjects } from "templates/coordinategrid/requests";
 
 const TeacherDashboardContainer = () => {
   const projects = getCustomProjects();
-  console.log("projects", projects);
   return (
     <Box>
       <Heading>My Custom Projects</Heading>
