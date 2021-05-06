@@ -6,6 +6,7 @@ const TeacherDashboardContainer = () => {
   return (
     <Box>
       <Heading>My Custom Projects</Heading>
+
       <Grid templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]} gap={4}>
         {projects.map((project, index) => {
           return (
