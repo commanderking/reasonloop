@@ -1,4 +1,4 @@
-import firebase from "store/firebase";
+import firebase from "store/auth/firebase";
 
 // Firebase sign up and sign in go through same UI
 // https://github.com/firebase/firebaseui-web/issues/665
