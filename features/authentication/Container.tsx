@@ -3,13 +3,17 @@ import React, { useEffect, useState } from "react";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import firebase from "store/firebase";
 import { signInConfig, signUpConfig } from "features/authentication/constants";
+import { Box, Heading } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 
 type Props = {
   type: "SIGN_IN" | "SIGN_UP";
 };
 
 function AuthenticationContainer({ type }: Props) {
-  const [isSignedIn, setIsSignedIn] = useState(false); // Local signed-in state.
+  // Local signed-in state - null represents not known yet if user is true or false
+  const [isSignedIn, setIsSignedIn] = useState(null);
+  const router = useRouter();
 
   // Listen to the Firebase Auth state and set the local state.
   useEffect(() => {
@@ -17,33 +21,33 @@ function AuthenticationContainer({ type }: Props) {
       .auth()
       .onAuthStateChanged((user) => {
         console.log("user", user);
-        setIsSignedIn(!!user);
+        setIsSignedIn(Boolean(user));
       });
     return () => unregisterAuthObserver(); // Make sure we un-register Firebase observers when the component unmounts.
   }, []);
 
+  useEffect(() => {
+    if (isSignedIn) {
+      router.push("/teacher");
+    }
+  }, [isSignedIn]);
+
+  if (isSignedIn === null) {
+    return <div>Loading...</div>;
+  }
   if (!isSignedIn) {
     return (
-      <div>
+      <Box>
         <h1>My App</h1>
         <p>Please sign-in:</p>
         <StyledFirebaseAuth
           uiConfig={type === "SIGN_IN" ? signInConfig : signUpConfig}
           firebaseAuth={firebase.auth()}
         />
-      </div>
+      </Box>
     );
   }
-  return (
-    <div>
-      <h1>My App</h1>
-      <p>
-        Welcome {firebase.auth().currentUser.displayName}! You are now
-        signed-in!
-      </p>
-      <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
-    </div>
-  );
+  return null;
 }
 
 export default AuthenticationContainer;
