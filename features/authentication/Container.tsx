@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import firebase from "store/firebase";
 import { signInConfig, signUpConfig } from "features/authentication/constants";
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Heading, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 
 type Props = {
@@ -20,7 +20,6 @@ function AuthenticationContainer({ type }: Props) {
     const unregisterAuthObserver = firebase
       .auth()
       .onAuthStateChanged((user) => {
-        console.log("user", user);
         setIsSignedIn(Boolean(user));
       });
     return () => unregisterAuthObserver(); // Make sure we un-register Firebase observers when the component unmounts.
@@ -38,8 +37,8 @@ function AuthenticationContainer({ type }: Props) {
   if (!isSignedIn) {
     return (
       <Box>
-        <h1>My App</h1>
-        <p>Please sign-in:</p>
+        <Heading>My App</Heading>
+        <Text>Please sign-in:</Text>
         <StyledFirebaseAuth
           uiConfig={type === "SIGN_IN" ? signInConfig : signUpConfig}
           firebaseAuth={firebase.auth()}
