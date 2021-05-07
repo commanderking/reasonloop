@@ -18,18 +18,18 @@ export const useAuth = () => {
   }));
 
   useEffect(() => {
-    console.log("useAuth hasLoadedUser", hasLoadedUser);
+    // Only run onAuthStateChange if we haven' tried to load the user before
+    let unsubscribe = () => {};
+    if (!user && !hasLoadedUser) {
+      unsubscribe = firebase.auth().onAuthStateChanged((user) => {
+        if (!user) {
+          setUser(false);
+        }
 
-    const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
-      if (!user) {
-        setUser(false);
-      }
-
-      setUser(user);
-      setHasLoadedUser(true);
-      console.log("useAuth hasLoadedUser", hasLoadedUser);
-    });
-
+        setUser(user);
+        setHasLoadedUser(true);
+      });
+    }
     return () => unsubscribe();
   }, []);
 

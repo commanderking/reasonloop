@@ -12,8 +12,7 @@ type Props = {
 };
 
 function AuthenticationContainer({ type }: Props) {
-  const auth = useAuth();
-  const { hasLoadedUser, user } = auth;
+  const { hasLoadedUser, user } = useAuth();
   const router = useRouter();
 
   useEffect(() => {
