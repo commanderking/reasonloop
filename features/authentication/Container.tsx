@@ -27,8 +27,9 @@ function AuthenticationContainer({ type }: Props) {
   if (!user) {
     return (
       <Box>
-        <Heading>My App</Heading>
-        <Text>Please sign-in:</Text>
+        <Heading textAlign="center">
+          {type === "SIGN_IN" ? "Sign In" : "Sign Up"}
+        </Heading>
         <StyledFirebaseAuth
           uiConfig={type === "SIGN_IN" ? signInConfig : signUpConfig}
           firebaseAuth={firebase.auth()}
