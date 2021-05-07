@@ -5,7 +5,7 @@ import { signInConfig, signUpConfig } from "features/authentication/constants";
 import { Box, Heading, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import firebase from "store/auth/firebase";
-import { useAuth } from "store/auth/store";
+import { useAuth } from "store/auth/useAuth";
 
 type Props = {
   type: "SIGN_IN" | "SIGN_UP";
@@ -13,7 +13,7 @@ type Props = {
 
 function AuthenticationContainer({ type }: Props) {
   const auth = useAuth();
-  const { isLoadingUser, user } = auth;
+  const { hasLoadedUser, user } = auth;
   const router = useRouter();
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function AuthenticationContainer({ type }: Props) {
     }
   }, [user]);
 
-  if (isLoadingUser) {
+  if (!hasLoadedUser) {
     return <div>Loading...</div>;
   }
   if (!user) {
