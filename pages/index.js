@@ -2,12 +2,11 @@ import Head from "next/head";
 import {
   Box,
   Heading,
-  Grid,
   Button,
-  Text,
   Divider,
-  GridItem,
-  Stack,
+  FormControl,
+  FormLabel,
+  Input,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -62,17 +61,32 @@ export default function Home() {
           </Heading>
           <AuthenticTable />
         </Box>
-        <Box id="waitlist" width={[300, 600]} margin="auto">
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLScO_0FpyvMGuCOAlhgJngKVi78fICSTsGYAvn9LyVcWudf2fQ/viewform?embedded=true"
-            width="100%"
-            height={600}
-            frameBorder="0"
-            marginHeight={0}
-            marginWidth={0}
-          >
-            Loading…
-          </iframe>
+
+        <Divider mt={8} mb={8} />
+
+        <Box id="waitlist" width={[150, 300]} margin="auto" mb={200}>
+          <Heading size="lg">Join Wait List</Heading>
+
+          <Box mt={4}>
+            <form
+              id="waitlist"
+              action="https://docs.google.com/forms/d/e/1FAIpQLScO_0FpyvMGuCOAlhgJngKVi78fICSTsGYAvn9LyVcWudf2fQ/formResponse"
+              method="post"
+              target="_blank"
+            >
+              <FormControl>
+                <FormLabel>Name</FormLabel>
+                <Input name="entry.145226338" placeholder="Name" />
+              </FormControl>
+              <FormControl mt={4}>
+                <FormLabel>Email</FormLabel>
+                <Input name="entry.2137045222" placeholder="Email" />
+              </FormControl>
+              <Button mt={4} type="submit" value="Send" colorScheme="teal">
+                Send
+              </Button>
+            </form>
+          </Box>
         </Box>
       </Box>
     </Box>
