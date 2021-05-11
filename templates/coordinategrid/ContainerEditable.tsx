@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { useRef, useState } from "react";
 import {
   Box,
   Heading,
@@ -11,6 +11,17 @@ import { CoordinateGrid } from "open-math-tools";
 import { iconMap } from "constants/icons";
 import Image from "next/image";
 import { saveCustomProject } from "templates/coordinategrid/requests";
+import dynamic from "next/dynamic";
+
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import { EditorState, convertFromRaw } from "draft-js";
+
+import draftToHtml from "draftjs-to-html";
+
+const Editor = dynamic(
+  () => import("react-draft-wysiwyg").then((mod) => mod.Editor),
+  { ssr: false }
+);
 
 const CoordinateGridContainer = ({ data }) => {
   const [name, setName] = useState(data.name);
@@ -27,6 +38,15 @@ const CoordinateGridContainer = ({ data }) => {
       size: 15,
     }))
   );
+
+  const [editorState, setEditorState] = useState(() =>
+    EditorState.createEmpty()
+  );
+
+  const editor = useRef(null);
+  function focusEditor() {
+    editor.current.focus();
+  }
 
   const handleIconClick = (icon) => {
     const newIcons = activeIcons.filter(
@@ -132,6 +152,25 @@ const CoordinateGridContainer = ({ data }) => {
           Save Custom Project
         </Button>
       </Box>
+      <div>
+        {/* <RichTextEditor
+          onChange={handleEditorChange}
+          value={editorValue}
+        ></RichTextEditor> */}
+        <Editor
+          editorState={editorState}
+          toolbarClassName="toolbarClassName"
+          wrapperClassName="wrapperClassName"
+          editorClassName="editorClassName"
+          onEditorStateChange={(editorState) => {
+            console.log("editorState", editorState);
+            setEditorState(editorState);
+          }}
+          onContentStageChange={(content) => {
+            console.log("content", content);
+          }}
+        />
+      </div>
     </Box>
   );
 };
