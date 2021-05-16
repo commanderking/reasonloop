@@ -2,12 +2,18 @@ const mockProjectData = {
   id: "1",
   name: "Project - Cell Towers in Camden, NJ",
   avatar: "robot_1",
-  overview:
-    "Government officials in Camden, NJ are determining how many cell towers are required to cover the needs of their residents. Houses within 4 kilometers of each cell tower can receive cell coverage. How many cell towers should they build and where?",
+  // overview:
+  //   "Government officials in Camden, NJ are determining how many cell towers are required to cover the needs of their residents. Houses within 4 kilometers of each cell tower can receive cell coverage. How many cell towers should they build and where?",
   requirements: [
     "Each unit on the map represents 1 km ",
     "Residents prefer cell towers be built at least 1 km away from their neighborhood.",
   ],
+  overview: `<p>Government officials in Camden, NJ are determining how many cell towers are required to cover the needs of their residents. Houses within 4 kilometers of each cell tower can receive cell coverage. How many cell towers should they build and where?&nbsp;</p>
+  <p><strong>Details:</strong></p>
+  <ol>
+  <li>Each unit on the map represents 1 km.</li>
+  <li>Residents prefer cell towers be built at least 1 km away from their neighborhood.&nbsp;</li>
+  </ol>`,
   projectType: "COORDINATE_GRID",
   projectData: {
     placedIcons: [
