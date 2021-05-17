@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import {
   Box,
   Heading,
@@ -11,10 +11,26 @@ import { CoordinateGrid } from "open-math-tools";
 import { iconMap } from "constants/icons";
 import Image from "next/image";
 import { saveCustomProject } from "templates/coordinategrid/requests";
+import dynamic from "next/dynamic";
+
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import { EditorState, ContentState, convertToRaw } from "draft-js";
+import draftToHtml from "draftjs-to-html";
+
+// Seems to be an issue with this version of htmlToDraft not handling dynamic imports correctly
+// https://github.com/jpuri/html-to-draftjs/issues/83
+let htmlToDraft = null;
+if (typeof window === "object") {
+  htmlToDraft = require("html-to-draftjs").default;
+}
+
+const Editor = dynamic(
+  () => import("react-draft-wysiwyg").then((mod) => mod.Editor),
+  { ssr: false }
+) as any; // need to figure out how to type dynamic imports better
 
 const CoordinateGridContainer = ({ data }) => {
   const [name, setName] = useState(data.name);
-  const [overview, setOverview] = useState(data.overview);
 
   const [placeableIcon, setPlaceableIcon] = useState(
     data.projectData.addableIcon.iconType
@@ -28,6 +44,19 @@ const CoordinateGridContainer = ({ data }) => {
     }))
   );
 
+  const [editorState, setEditorState] = useState(() => {
+    const contentBlock = window ? htmlToDraft(data.overview) : null;
+    if (contentBlock) {
+      const contentState = ContentState.createFromBlockArray(
+        contentBlock.contentBlocks
+      );
+      const editorState = EditorState.createWithContent(contentState);
+      return editorState;
+    }
+
+    return EditorState.createEmpty();
+  });
+
   const handleIconClick = (icon) => {
     const newIcons = activeIcons.filter(
       (currentIcon) => !(currentIcon.x === icon.x && currentIcon.y === icon.y)
@@ -37,6 +66,10 @@ const CoordinateGridContainer = ({ data }) => {
   };
 
   const availableIcons = Object.values(iconMap);
+
+  const getOverviewHtml = (editorState) => {
+    return draftToHtml(convertToRaw(editorState.getCurrentContent()));
+  };
 
   return (
     <Box maxWidth={824} margin="auto" mb={150}>
@@ -51,12 +84,23 @@ const CoordinateGridContainer = ({ data }) => {
       </Box>
       <Box mt={8}>
         <Heading size="lg">Overview</Heading>
-        <Textarea
-          onChange={(e) => {
-            setOverview(e.target.value);
-          }}
-          value={overview}
-        />
+        <Box border="1px solid" borderColor="gray.200" pl={4} pr={4}>
+          <Editor
+            editorState={editorState}
+            toolbarClassName="toolbarClassName"
+            wrapperClassName="wrapperClassName"
+            editorClassName="editorClassName"
+            onEditorStateChange={(editorState) => {
+              setEditorState(editorState);
+            }}
+            toolbar={{
+              options: ["inline", "fontSize", "list", "emoji"],
+              inline: {
+                options: ["bold", "italic", "underline"],
+              },
+            }}
+          />
+        </Box>
       </Box>
       <Box mt={8}>
         <Heading size="lg">Starting Grid</Heading>
@@ -118,7 +162,7 @@ const CoordinateGridContainer = ({ data }) => {
             saveCustomProject({
               ...data,
               name,
-              overview,
+              overview: getOverviewHtml(editorState),
               projectData: {
                 ...data.projectData,
                 placedIcons: activeIcons,
