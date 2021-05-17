@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import {
   Box,
   Heading,
@@ -57,8 +57,6 @@ const CoordinateGridContainer = ({ data }) => {
     return EditorState.createEmpty();
   });
 
-  const editor = useRef(null);
-
   const handleIconClick = (icon) => {
     const newIcons = activeIcons.filter(
       (currentIcon) => !(currentIcon.x === icon.x && currentIcon.y === icon.y)
@@ -70,8 +68,7 @@ const CoordinateGridContainer = ({ data }) => {
   const availableIcons = Object.values(iconMap);
 
   const getOverviewHtml = (editorState) => {
-    const html = draftToHtml(convertToRaw(editorState.getCurrentContent()));
-    return html;
+    return draftToHtml(convertToRaw(editorState.getCurrentContent()));
   };
 
   return (
