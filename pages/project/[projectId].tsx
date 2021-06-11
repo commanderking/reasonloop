@@ -7,11 +7,6 @@ const fetcher = (args) => {
 
 const ProjectPage = () => {
   const { data, error } = useSWR("/api/project", fetcher);
-  const { data: testData } = useSWR(
-    "/api/data/schools/philadelphia/graduation_rates"
-  );
-
-  console.log("testData", testData);
 
   if (!data) {
     return <div>Loading Project</div>;
