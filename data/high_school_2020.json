@@ -1,0 +1,927 @@
+[
+  {
+    "graduatesCount": 126,
+    "graduatesPotentialCount": 171,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 74,
+    "averageDailyAttendance": 78,
+    "name": "John Bartram High School",
+    "schoolId": "1010",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "39.92149737, -75.23405562"
+  },
+  {
+    "graduatesCount": 85,
+    "graduatesPotentialCount": 131,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 65,
+    "averageDailyAttendance": 84,
+    "name": "West Philadelphia High School",
+    "schoolId": "1020",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "39.958110, -75.219654"
+  },
+  {
+    "graduatesCount": 90,
+    "graduatesPotentialCount": 106,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 85,
+    "averageDailyAttendance": 91,
+    "name": "High School of the Future",
+    "schoolId": "1030",
+    "admissionType": "Citywide",
+    "gpsLocation": "39.97465766, -75.2047566"
+  },
+  {
+    "graduatesCount": 67,
+    "graduatesPotentialCount": 72,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 93,
+    "averageDailyAttendance": 96,
+    "name": "Paul Robeson High School for Human Services",
+    "schoolId": "1050",
+    "admissionType": "Citywide",
+    "gpsLocation": "39.95679553, -75.20476311"
+  },
+  {
+    "graduatesCount": 66,
+    "graduatesPotentialCount": 103,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 64,
+    "averageDailyAttendance": 86,
+    "name": "William L. Sayre High School",
+    "schoolId": "1100",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "39.95759354, -75.23859405"
+  },
+  {
+    "graduatesCount": 96,
+    "graduatesPotentialCount": 99,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 97,
+    "averageDailyAttendance": 97,
+    "name": "Motivation High School",
+    "schoolId": "1190",
+    "admissionType": "Special Admit",
+    "gpsLocation": "39.94453199, -75.24184422"
+  },
+  {
+    "graduatesCount": 83,
+    "graduatesPotentialCount": 155,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 54,
+    "averageDailyAttendance": 85,
+    "name": "South Philadelphia High School",
+    "schoolId": "2000",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "39.9238987, -75.1691065"
+  },
+  {
+    "graduatesCount": 55,
+    "graduatesPotentialCount": 95,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 58,
+    "averageDailyAttendance": 84,
+    "name": "Benjamin Franklin High School",
+    "schoolId": "2010",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "39.963530, -75.161640"
+  },
+  {
+    "graduatesCount": 168,
+    "graduatesPotentialCount": 175,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 96,
+    "averageDailyAttendance": 96,
+    "name": "High School for Creative and Performing Arts",
+    "schoolId": "2020",
+    "admissionType": "Special Admit",
+    "gpsLocation": "39.93941992, -75.16548375"
+  },
+  {
+    "graduatesCount": 116,
+    "graduatesPotentialCount": 117,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 99,
+    "averageDailyAttendance": 98,
+    "name": "Julia R. Masterman School",
+    "schoolId": "2140",
+    "admissionType": "Special Admit",
+    "gpsLocation": "39.96320031, -75.16620758"
+  },
+  {
+    "graduatesCount": 149,
+    "graduatesPotentialCount": 219,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 68,
+    "averageDailyAttendance": 86,
+    "name": "Furness High School",
+    "schoolId": "2160",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "39.923762, -75.150585"
+  },
+  {
+    "graduatesCount": 197,
+    "graduatesPotentialCount": 218,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 90,
+    "averageDailyAttendance": 93,
+    "name": "Franklin Learning Center",
+    "schoolId": "2290",
+    "admissionType": "Special Admit",
+    "gpsLocation": "39.965049, -75.162753"
+  },
+  {
+    "graduatesCount": null,
+    "graduatesPotentialCount": 9,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": null,
+    "name": "Camelot Academy",
+    "schoolId": "2310",
+    "admissionType": "Alternative",
+    "gpsLocation": "39.978134, -75.177658"
+  },
+  {
+    "graduatesCount": 64,
+    "graduatesPotentialCount": 64,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 100,
+    "averageDailyAttendance": 96,
+    "name": "Girard Academic Music Program",
+    "schoolId": "2410",
+    "admissionType": "Special Admit",
+    "gpsLocation": "39.92210463, -75.18256439"
+  },
+  {
+    "graduatesCount": 3,
+    "graduatesPotentialCount": 90,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 3,
+    "name": "Phila. Juv. Justice Services Ctr. School",
+    "schoolId": "2530",
+    "admissionType": "Alternative",
+    "gpsLocation": "39.96136565, -75.21572624"
+  },
+  {
+    "graduatesCount": 187,
+    "graduatesPotentialCount": 191,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 98,
+    "averageDailyAttendance": 96,
+    "name": "Academy at Palumbo",
+    "schoolId": "2620",
+    "admissionType": "Special Admit",
+    "gpsLocation": "39.94019787, -75.16194915"
+  },
+  {
+    "graduatesCount": 118,
+    "graduatesPotentialCount": 121,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 98,
+    "averageDailyAttendance": 96,
+    "name": "Science Leadership Academy",
+    "schoolId": "2650",
+    "admissionType": "Special Admit",
+    "gpsLocation": "39.963701, -75.162516"
+  },
+  {
+    "graduatesCount": 95,
+    "graduatesPotentialCount": 95,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 100,
+    "averageDailyAttendance": 95,
+    "name": "Constitution High School",
+    "schoolId": "2670",
+    "admissionType": "Citywide",
+    "gpsLocation": "39.950252, -75.152336"
+  },
+  {
+    "graduatesCount": 114,
+    "graduatesPotentialCount": 120,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 95,
+    "averageDailyAttendance": 96,
+    "name": "The Science Leadership Academy at Beeber",
+    "schoolId": "2680",
+    "admissionType": "Special Admit",
+    "gpsLocation": "39.98610221, -75.24192008"
+  },
+  {
+    "graduatesCount": 20,
+    "graduatesPotentialCount": 85,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 24,
+    "name": "Ben Franklin High School EOP",
+    "schoolId": "3210",
+    "admissionType": "Alternative",
+    "gpsLocation": "39.962909, -75.159210"
+  },
+  {
+    "graduatesCount": 14,
+    "graduatesPotentialCount": 43,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 33,
+    "name": "Liguori Academy-Fortis",
+    "schoolId": "3240",
+    "admissionType": "Alternative",
+    "gpsLocation": "39.994204, -75.111842"
+  },
+  {
+    "graduatesCount": 72,
+    "graduatesPotentialCount": 201,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 36,
+    "name": "Excel Academy South",
+    "schoolId": "3290",
+    "admissionType": "Alternative",
+    "gpsLocation": "40.02608143, -75.10251944"
+  },
+  {
+    "graduatesCount": 25,
+    "graduatesPotentialCount": 99,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 25,
+    "name": "El Centro de Estudiantes (Big Picture)",
+    "schoolId": "3510",
+    "admissionType": "Alternative",
+    "gpsLocation": "40.011798, -75.090845"
+  },
+  {
+    "graduatesCount": 15,
+    "graduatesPotentialCount": 47,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 32,
+    "name": "Ombudsman Northwest",
+    "schoolId": "3540",
+    "admissionType": "Alternative",
+    "gpsLocation": "40.05586457, -75.15648403"
+  },
+  {
+    "graduatesCount": 26,
+    "graduatesPotentialCount": 80,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 33,
+    "name": "One Bright Ray - Elmwood Campus",
+    "schoolId": "3810",
+    "admissionType": "Alternative",
+    "gpsLocation": "39.92251591, -75.22908493"
+  },
+  {
+    "graduatesCount": 12,
+    "graduatesPotentialCount": 17,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 71,
+    "name": "Camelot Academy East",
+    "schoolId": "3820",
+    "admissionType": "Alternative",
+    "gpsLocation": "40.01425525, -75.12599679"
+  },
+  {
+    "graduatesCount": 17,
+    "graduatesPotentialCount": 66,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 26,
+    "name": "Philadelphia OIC Workforce Academy",
+    "schoolId": "3840",
+    "admissionType": "Alternative",
+    "gpsLocation": "39.972966, -75.158721"
+  },
+  {
+    "graduatesCount": 11,
+    "graduatesPotentialCount": 57,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 19,
+    "name": "Northeast High School EOP",
+    "schoolId": "3850",
+    "admissionType": "Alternative",
+    "gpsLocation": "40.055681, -75.071168"
+  },
+  {
+    "graduatesCount": 22,
+    "graduatesPotentialCount": 57,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 39,
+    "name": "South Philadelphia High School EOP",
+    "schoolId": "3880",
+    "admissionType": "Alternative",
+    "gpsLocation": "39.9238987, -75.1691065"
+  },
+  {
+    "graduatesCount": 83,
+    "graduatesPotentialCount": 151,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 55,
+    "averageDailyAttendance": 78,
+    "name": "Overbrook High School",
+    "schoolId": "4020",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "39.981028, -75.238556"
+  },
+  {
+    "graduatesCount": 185,
+    "graduatesPotentialCount": 190,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 97,
+    "averageDailyAttendance": 97,
+    "name": "High School of Engineering and Science",
+    "schoolId": "4030",
+    "admissionType": "Special Admit",
+    "gpsLocation": "39.98341809, -75.16127789"
+  },
+  {
+    "graduatesCount": 125,
+    "graduatesPotentialCount": 142,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 88,
+    "averageDailyAttendance": 88,
+    "name": "Murrell Dobbins Career and Technical High School",
+    "schoolId": "4060",
+    "admissionType": "Citywide",
+    "gpsLocation": "39.9954293, -75.16679334"
+  },
+  {
+    "graduatesCount": 29,
+    "graduatesPotentialCount": 54,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 54,
+    "averageDailyAttendance": 79,
+    "name": "Strawberry Mansion High School",
+    "schoolId": "4140",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "39.99074371, -75.18402464"
+  },
+  {
+    "graduatesCount": 148,
+    "graduatesPotentialCount": 254,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 58,
+    "averageDailyAttendance": 80,
+    "name": "Thomas A. Edison High School",
+    "schoolId": "5020",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "40.01116485, -75.12863791"
+  },
+  {
+    "graduatesCount": 35,
+    "graduatesPotentialCount": 37,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 95,
+    "averageDailyAttendance": 91,
+    "name": "Philadelphia Military Academy",
+    "schoolId": "5050",
+    "admissionType": "Citywide",
+    "gpsLocation": "39.98470959, -75.15443401"
+  },
+  {
+    "graduatesCount": 127,
+    "graduatesPotentialCount": 143,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 89,
+    "averageDailyAttendance": 88,
+    "name": "Jules E. Mastbaum Area Vocational Technical High School",
+    "schoolId": "5060",
+    "admissionType": "Citywide",
+    "gpsLocation": "39.99214686, -75.11213573"
+  },
+  {
+    "graduatesCount": 68,
+    "graduatesPotentialCount": 69,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 99,
+    "averageDailyAttendance": 97,
+    "name": "Parkway Northwest High School",
+    "schoolId": "5070",
+    "admissionType": "Special Admit",
+    "gpsLocation": "40.05664074, -75.16457453"
+  },
+  {
+    "graduatesCount": 114,
+    "graduatesPotentialCount": 115,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 99,
+    "averageDailyAttendance": 96,
+    "name": "Parkway Center City Middle College High School",
+    "schoolId": "5080",
+    "admissionType": "Special Admit",
+    "gpsLocation": "39.96300501, -75.1592865"
+  },
+  {
+    "graduatesCount": 44,
+    "graduatesPotentialCount": 55,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 80,
+    "averageDailyAttendance": 91,
+    "name": "Parkway West High School",
+    "schoolId": "5090",
+    "admissionType": "Special Admit",
+    "gpsLocation": "39.96425379, -75.21546704"
+  },
+  {
+    "graduatesCount": 139,
+    "graduatesPotentialCount": 140,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 99,
+    "averageDailyAttendance": 95,
+    "name": "William W. Bodine High School",
+    "schoolId": "5150",
+    "admissionType": "Special Admit",
+    "gpsLocation": "39.96793026, -75.14343443"
+  },
+  {
+    "graduatesCount": 73,
+    "graduatesPotentialCount": 106,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 69,
+    "averageDailyAttendance": 87,
+    "name": "Penn Treaty High School",
+    "schoolId": "5160",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "39.97272711, -75.12787008"
+  },
+  {
+    "graduatesCount": null,
+    "graduatesPotentialCount": 9,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": null,
+    "averageDailyAttendance": 85,
+    "name": "Vaux High School: A Big Picture",
+    "schoolId": "5180",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "39.976325, -75.174186"
+  },
+  {
+    "graduatesCount": 102,
+    "graduatesPotentialCount": 131,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 78,
+    "averageDailyAttendance": 86,
+    "name": "Kensington High School for Creative and Performing Arts",
+    "schoolId": "5520",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "39.97794956, -75.1330532"
+  },
+  {
+    "graduatesCount": 104,
+    "graduatesPotentialCount": 124,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 84,
+    "averageDailyAttendance": 89,
+    "name": "Kensington Health Sciences Academy",
+    "schoolId": "5550",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "39.985026, -75.128685"
+  },
+  {
+    "graduatesCount": 55,
+    "graduatesPotentialCount": 64,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 86,
+    "averageDailyAttendance": 92,
+    "name": "Building 21",
+    "schoolId": "5610",
+    "admissionType": "Citywide",
+    "gpsLocation": "40.053631, -75.152481"
+  },
+  {
+    "graduatesCount": 38,
+    "graduatesPotentialCount": 51,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 75,
+    "averageDailyAttendance": 86,
+    "name": "The U School",
+    "schoolId": "5620",
+    "admissionType": "Citywide",
+    "gpsLocation": "39.981983, -75.146256"
+  },
+  {
+    "graduatesCount": 35,
+    "graduatesPotentialCount": 42,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 83,
+    "averageDailyAttendance": 89,
+    "name": "The LINC",
+    "schoolId": "5660",
+    "admissionType": "Citywide",
+    "gpsLocation": "40.006819, -75.129736"
+  },
+  {
+    "graduatesCount": 100,
+    "graduatesPotentialCount": 145,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 69,
+    "averageDailyAttendance": 83,
+    "name": "Kensington High School",
+    "schoolId": "5700",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "39.98483396, -75.12640188"
+  },
+  {
+    "graduatesCount": 536,
+    "graduatesPotentialCount": 542,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 99,
+    "averageDailyAttendance": 97,
+    "name": "Central High School",
+    "schoolId": "6010",
+    "admissionType": "Special Admit",
+    "gpsLocation": "40.0372851, -75.15074825"
+  },
+  {
+    "graduatesCount": 125,
+    "graduatesPotentialCount": 161,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 78,
+    "averageDailyAttendance": 88,
+    "name": "Roxborough High School",
+    "schoolId": "6030",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "40.03802479, -75.22283357"
+  },
+  {
+    "graduatesCount": 111,
+    "graduatesPotentialCount": 116,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 96,
+    "averageDailyAttendance": 93,
+    "name": "Walter B. Saul High School",
+    "schoolId": "6040",
+    "admissionType": "Special Admit",
+    "gpsLocation": "40.04902036, -75.21981676"
+  },
+  {
+    "graduatesCount": 222,
+    "graduatesPotentialCount": 230,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 97,
+    "averageDailyAttendance": 94,
+    "name": "Philadelphia High School for Girls",
+    "schoolId": "6050",
+    "admissionType": "Special Admit",
+    "gpsLocation": "40.03898514, -75.14475989"
+  },
+  {
+    "graduatesCount": 83,
+    "graduatesPotentialCount": 169,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 49,
+    "averageDailyAttendance": 83,
+    "name": "Martin Luther King High School",
+    "schoolId": "6060",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "40.05756238, -75.16217184"
+  },
+  {
+    "graduatesCount": 61,
+    "graduatesPotentialCount": 68,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 90,
+    "averageDailyAttendance": 88,
+    "name": "A. Philip Randolph Career and Technical High School",
+    "schoolId": "6090",
+    "admissionType": "Citywide",
+    "gpsLocation": "40.008504, -75.179609"
+  },
+  {
+    "graduatesCount": 56,
+    "graduatesPotentialCount": 79,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 71,
+    "averageDailyAttendance": 95,
+    "name": "Hill-Freedman World Academy",
+    "schoolId": "6460",
+    "admissionType": "Special Admit",
+    "gpsLocation": "40.071311, -75.175303"
+  },
+  {
+    "graduatesCount": 103,
+    "graduatesPotentialCount": 104,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 99,
+    "averageDailyAttendance": 96,
+    "name": "Lankenau High School",
+    "schoolId": "6540",
+    "admissionType": "Special Admit",
+    "gpsLocation": "40.06153271, -75.25295594"
+  },
+  {
+    "graduatesCount": 164,
+    "graduatesPotentialCount": 268,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 61,
+    "averageDailyAttendance": 84,
+    "name": "Frankford High School",
+    "schoolId": "7010",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "40.021602, -75.084823"
+  },
+  {
+    "graduatesCount": 196,
+    "graduatesPotentialCount": 272,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 72,
+    "averageDailyAttendance": 88,
+    "name": "Samuel Fels High School",
+    "schoolId": "7120",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "40.03564646, -75.09109404"
+  },
+  {
+    "graduatesCount": 293,
+    "graduatesPotentialCount": 409,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 72,
+    "averageDailyAttendance": 89,
+    "name": "Abraham Lincoln High School",
+    "schoolId": "8010",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "40.04310838, -75.04479221"
+  },
+  {
+    "graduatesCount": 742,
+    "graduatesPotentialCount": 950,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 78,
+    "averageDailyAttendance": 91,
+    "name": "Northeast High School",
+    "schoolId": "8020",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "40.05564409, -75.07118355"
+  },
+  {
+    "graduatesCount": 245,
+    "graduatesPotentialCount": 341,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 72,
+    "averageDailyAttendance": 90,
+    "name": "George Washington High School",
+    "schoolId": "8030",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "40.10598577, -75.02723013"
+  },
+  {
+    "graduatesCount": 135,
+    "graduatesPotentialCount": 137,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 99,
+    "averageDailyAttendance": 96,
+    "name": "Arts Academy at Benjamin Rush",
+    "schoolId": "8040",
+    "admissionType": "Special Admit",
+    "gpsLocation": "40.08253275, -74.9752061"
+  },
+  {
+    "graduatesCount": 64,
+    "graduatesPotentialCount": 122,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 52,
+    "name": "OIC CADI",
+    "schoolId": "8070",
+    "admissionType": "Alternative",
+    "gpsLocation": "39.958322, -75.144801"
+  },
+  {
+    "graduatesCount": 57,
+    "graduatesPotentialCount": 115,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 50,
+    "name": "Excel Academy North",
+    "schoolId": "8080",
+    "admissionType": "Alternative",
+    "gpsLocation": "39.978134, -75.177658"
+  },
+  {
+    "graduatesCount": 126,
+    "graduatesPotentialCount": 138,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 91,
+    "averageDailyAttendance": 94,
+    "name": "Swenson Arts and Technology High School",
+    "schoolId": "8090",
+    "admissionType": "Citywide",
+    "gpsLocation": "40.0921093, -75.01398863"
+  },
+  {
+    "graduatesCount": 22,
+    "graduatesPotentialCount": 52,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 42,
+    "name": "Gateway to College - Community College of Philadelphia",
+    "schoolId": "8100",
+    "admissionType": "Alternative",
+    "gpsLocation": "39.9629017, -75.16627046"
+  },
+  {
+    "graduatesCount": 43,
+    "graduatesPotentialCount": 148,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 29,
+    "name": "One Bright Ray - Fairhill Campus",
+    "schoolId": "8190",
+    "admissionType": "Alternative",
+    "gpsLocation": "39.99376434, -75.13801882"
+  },
+  {
+    "graduatesCount": 18,
+    "graduatesPotentialCount": 66,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 27,
+    "name": "YES Philly",
+    "schoolId": "8450",
+    "admissionType": "Alternative",
+    "gpsLocation": "39.97290649, -75.15863287"
+  },
+  {
+    "graduatesCount": 13,
+    "graduatesPotentialCount": 39,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 33,
+    "name": "Philadelphia Learning Academy South",
+    "schoolId": "8460",
+    "admissionType": "Alternative",
+    "gpsLocation": "39.96971371, -75.21013521"
+  },
+  {
+    "graduatesCount": 6,
+    "graduatesPotentialCount": 21,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 29,
+    "name": "Philadelphia Learning Academy North",
+    "schoolId": "8470",
+    "admissionType": "Alternative",
+    "gpsLocation": "40.01425525, -75.12599679"
+  },
+  {
+    "graduatesCount": 1,
+    "graduatesPotentialCount": 13,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 8,
+    "name": "Pennypack House School",
+    "schoolId": "8540",
+    "admissionType": "Alternative",
+    "gpsLocation": "40.032021, -75.019689"
+  },
+  {
+    "graduatesCount": 50,
+    "graduatesPotentialCount": 51,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 98,
+    "averageDailyAttendance": 94,
+    "name": "The Workshop School",
+    "schoolId": "8560",
+    "admissionType": "Citywide",
+    "gpsLocation": "39.95530589, -75.21855329"
+  },
+  {
+    "graduatesCount": null,
+    "graduatesPotentialCount": 5,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": null,
+    "name": "Crossroads Accelerated Academy",
+    "schoolId": "8690",
+    "admissionType": "Alternative",
+    "gpsLocation": "39.96971371, -75.21013521"
+  },
+  {
+    "graduatesCount": 107,
+    "graduatesPotentialCount": 199,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 54,
+    "averageDailyAttendance": 99,
+    "name": "Philadelphia Virtual Academy",
+    "schoolId": "8780",
+    "admissionType": "Virtual",
+    "gpsLocation": "39.96102159, -75.16264405"
+  },
+  {
+    "graduatesCount": 20,
+    "graduatesPotentialCount": 82,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 24,
+    "name": "One Bright Ray Mansion",
+    "schoolId": "8860",
+    "admissionType": "Alternative",
+    "gpsLocation": "39.99074371, -75.18402464"
+  },
+  {
+    "graduatesCount": 12,
+    "graduatesPotentialCount": 25,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 48,
+    "name": "One Bright Ray Mansion Evening",
+    "schoolId": "8870",
+    "admissionType": "Alternative",
+    "gpsLocation": "39.99074371, -75.18402464"
+  },
+  {
+    "graduatesCount": 48,
+    "graduatesPotentialCount": 153,
+    "gradRateType": "4-Year Graduation Rate",
+    "graduationRate": 31,
+    "name": "One Bright Ray - Simpson Campus",
+    "schoolId": "8890",
+    "admissionType": "Alternative",
+    "gpsLocation": "40.00528, -75.10560096"
+  },
+  {
+    "name": "Re-Engagement Center",
+    "schoolId": "8900",
+    "admissionType": "Alternative",
+    "gpsLocation": "39.96102159, -75.16264405"
+  },
+  {
+    "name": "YouthBuild Philadelphia Charter School",
+    "schoolId": "3304",
+    "admissionType": "Citywide With Criteria",
+    "gpsLocation": "39.97290649, -75.15863287"
+  },
+  {
+    "name": "Imhotep Institute Charter High School",
+    "schoolId": "3309",
+    "admissionType": "Citywide",
+    "gpsLocation": "40.049427, -75.154717"
+  },
+  {
+    "name": "Multicultural Academy Charter School",
+    "schoolId": "3312",
+    "admissionType": "Citywide",
+    "gpsLocation": "40.01112725, -75.15073123"
+  },
+  {
+    "name": "Preparatory Charter School of Mathematics, Science, Technology and Careers",
+    "schoolId": "3313",
+    "admissionType": "Citywide",
+    "gpsLocation": "39.92845355, -75.18665686"
+  },
+  {
+    "name": "Freire Charter School",
+    "schoolId": "3318",
+    "admissionType": "Citywide",
+    "gpsLocation": "39.95247289, -75.17442259"
+  },
+  {
+    "name": "Franklin Towne Charter High School",
+    "schoolId": "3331",
+    "admissionType": "Citywide With Criteria",
+    "gpsLocation": "40.007337, -75.066611"
+  },
+  {
+    "name": "KIPP DuBois Charter School",
+    "schoolId": "3353",
+    "admissionType": "Citywide With Criteria",
+    "gpsLocation": "39.98043019, -75.22085032"
+  },
+  {
+    "name": "Philadelphia Electrical and Technology Charter School",
+    "schoolId": "3358",
+    "admissionType": "Citywide",
+    "gpsLocation": "39.95060789, -75.16511082"
+  },
+  {
+    "name": "Mastery Charter School at Lenfest",
+    "schoolId": "3361",
+    "admissionType": "Citywide With Criteria",
+    "gpsLocation": "39.94950579, -75.14734776"
+  },
+  {
+    "name": "Mastery Charter School at Shoemaker",
+    "schoolId": "3383",
+    "admissionType": "Citywide With Criteria",
+    "gpsLocation": "39.975799, -75.228437"
+  },
+  {
+    "name": "Boys Latin of Philadelphia Charter School",
+    "schoolId": "3388",
+    "admissionType": "Citywide",
+    "gpsLocation": "39.95172558, -75.23374851"
+  },
+  {
+    "name": "Mastery Charter School at Pickett",
+    "schoolId": "3393",
+    "admissionType": "Citywide With Criteria",
+    "gpsLocation": "40.03187441, -75.18087124"
+  },
+  {
+    "name": "Aspira Charter School at Olney",
+    "schoolId": "3414",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "40.028772, -75.123808"
+  },
+  {
+    "name": "Mastery Charter School at Gratz",
+    "schoolId": "3416",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "40.01453965, -75.15660685"
+  },
+  {
+    "name": "Universal Charter School at Audenried",
+    "schoolId": "3417",
+    "admissionType": "Neighborhood",
+    "gpsLocation": "39.933737, -75.198590"
+  },
+  {
+    "name": "TECH Freire Charter School",
+    "schoolId": "3441",
+    "admissionType": "Citywide With Criteria",
+    "gpsLocation": "39.986869, -75.155669"
+  }
+]

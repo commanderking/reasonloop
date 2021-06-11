@@ -51,26 +51,22 @@ const mockProjectData = {
   },
   resources: [
     {
-      url:
-        "https://www.ixl.com/math/grade-8/find-the-distance-between-two-points",
+      url: "https://www.ixl.com/math/grade-8/find-the-distance-between-two-points",
       title: "IXL",
       description: "Find the distance between two points",
     },
     {
-      url:
-        "https://www.khanacademy.org/math/basic-geo/basic-geometry-pythagorean-theorem/pythagorean-theorem-distance/v/example-finding-distance-with-pythagorean-theorem",
+      url: "https://www.khanacademy.org/math/basic-geo/basic-geometry-pythagorean-theorem/pythagorean-theorem-distance/v/example-finding-distance-with-pythagorean-theorem",
       title: "Khan Academy",
       description: "Finding distance with Pythagorean theorem",
     },
     {
-      url:
-        "https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-numbers-operations/cc-8th-approximating-irrational-numbers/v/approximating-square-roots-2",
+      url: "https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-numbers-operations/cc-8th-approximating-irrational-numbers/v/approximating-square-roots-2",
       title: "Khan Academy",
       description: "Approximating irrational numbers",
     },
     {
-      url:
-        "https://mass.pbslearningmedia.org/resource/mgbh.math.ns.approxsqroot/approximating-square-roots-of-nonperfect-squares/",
+      url: "https://mass.pbslearningmedia.org/resource/mgbh.math.ns.approxsqroot/approximating-square-roots-of-nonperfect-squares/",
       title: "PBS",
       description: "Approximating Square Roots of Nonperfect Squares",
     },
