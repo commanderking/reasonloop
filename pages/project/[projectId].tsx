@@ -1,4 +1,4 @@
-import Container from "templates/coordinategrid/Container";
+import CoordinateGridContainer from "templates/coordinategrid/Container";
 import useSWR from "swr";
 
 const fetcher = (args) => {
@@ -11,7 +11,12 @@ const ProjectPage = () => {
   if (!data) {
     return <div>Loading Project</div>;
   }
-  return <Container data={data} />;
+
+  if (data.projectType === "COORDINATE_GRID") {
+    return <CoordinateGridContainer data={data} />;
+  }
+
+  return "No Project Found";
 };
 
 export default ProjectPage;
