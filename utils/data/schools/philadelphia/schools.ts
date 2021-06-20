@@ -161,6 +161,21 @@ export const getAttendanceRates = async (filter?: AttendanceFilters) => {
   );
 };
 
+const getLongitudeAndLatitude = (gpsLocation: string | null) => {
+  if (!gpsLocation) {
+    return null;
+  }
+
+  const [latitude, longitude] = gpsLocation.split(",").map((degree) => {
+    return parseFloat(degree.trim());
+  });
+
+  return {
+    longitude,
+    latitude,
+  };
+};
+
 const formatSchool = (school: any) => {
   const formattedSchool = _.mapKeys(school, (value, key) => {
     return _.camelCase(key);
@@ -171,7 +186,7 @@ const formatSchool = (school: any) => {
     name: formattedSchool.publicationName,
     schoolId: formattedSchool.ulcsCode,
     admissionType: formattedSchool.admissionType,
-    gpsLocation: formattedSchool.gpsLocation,
+    ...getLongitudeAndLatitude(formattedSchool.gpsLocation),
   };
 };
 
