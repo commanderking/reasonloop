@@ -25,12 +25,13 @@ const MapBox = ({ mapBoxApiKey }) => {
     >
       {highschools.map((school) => {
         return (
-          <Marker
-            longitude={school.longitude}
-            latitude={school.latitude}
-            onClick={() => setCurrentSchoolId(school.schoolId)}
-          >
-            <img width="20px" height="20px" src="/bus-stop.svg" />
+          <Marker longitude={school.longitude} latitude={school.latitude}>
+            <img
+              onClick={() => setCurrentSchoolId(school.schoolId)}
+              width="20px"
+              height="20px"
+              src="/bus-stop.svg"
+            />
           </Marker>
         );
       })}
