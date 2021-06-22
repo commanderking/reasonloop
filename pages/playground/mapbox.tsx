@@ -4,14 +4,6 @@ import highschools from "data/high_school_2020.json";
 
 const initialZoom = 12;
 const initialIconWidth = 10;
-const minZoom = 10;
-const maxZoom = 15;
-
-const minIconSize = 5;
-const maxIconSize = 20;
-
-// Icon = 2 * Zoom - 10
-//
 
 const MapBox = ({ mapBoxApiKey }) => {
   const [viewport, setViewport] = useState({
