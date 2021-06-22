@@ -8,7 +8,8 @@
     "name": "John Bartram High School",
     "schoolId": "1010",
     "admissionType": "Neighborhood",
-    "gpsLocation": "39.92149737, -75.23405562"
+    "longitude": -75.23405562,
+    "latitude": 39.92149737
   },
   {
     "graduatesCount": 85,
@@ -19,7 +20,8 @@
     "name": "West Philadelphia High School",
     "schoolId": "1020",
     "admissionType": "Neighborhood",
-    "gpsLocation": "39.958110, -75.219654"
+    "longitude": -75.219654,
+    "latitude": 39.95811
   },
   {
     "graduatesCount": 90,
@@ -30,7 +32,8 @@
     "name": "High School of the Future",
     "schoolId": "1030",
     "admissionType": "Citywide",
-    "gpsLocation": "39.97465766, -75.2047566"
+    "longitude": -75.2047566,
+    "latitude": 39.97465766
   },
   {
     "graduatesCount": 67,
@@ -41,7 +44,8 @@
     "name": "Paul Robeson High School for Human Services",
     "schoolId": "1050",
     "admissionType": "Citywide",
-    "gpsLocation": "39.95679553, -75.20476311"
+    "longitude": -75.20476311,
+    "latitude": 39.95679553
   },
   {
     "graduatesCount": 66,
@@ -52,7 +56,8 @@
     "name": "William L. Sayre High School",
     "schoolId": "1100",
     "admissionType": "Neighborhood",
-    "gpsLocation": "39.95759354, -75.23859405"
+    "longitude": -75.23859405,
+    "latitude": 39.95759354
   },
   {
     "graduatesCount": 96,
@@ -63,7 +68,8 @@
     "name": "Motivation High School",
     "schoolId": "1190",
     "admissionType": "Special Admit",
-    "gpsLocation": "39.94453199, -75.24184422"
+    "longitude": -75.24184422,
+    "latitude": 39.94453199
   },
   {
     "graduatesCount": 83,
@@ -74,7 +80,8 @@
     "name": "South Philadelphia High School",
     "schoolId": "2000",
     "admissionType": "Neighborhood",
-    "gpsLocation": "39.9238987, -75.1691065"
+    "longitude": -75.1691065,
+    "latitude": 39.9238987
   },
   {
     "graduatesCount": 55,
@@ -85,7 +92,8 @@
     "name": "Benjamin Franklin High School",
     "schoolId": "2010",
     "admissionType": "Neighborhood",
-    "gpsLocation": "39.963530, -75.161640"
+    "longitude": -75.16164,
+    "latitude": 39.96353
   },
   {
     "graduatesCount": 168,
@@ -96,7 +104,8 @@
     "name": "High School for Creative and Performing Arts",
     "schoolId": "2020",
     "admissionType": "Special Admit",
-    "gpsLocation": "39.93941992, -75.16548375"
+    "longitude": -75.16548375,
+    "latitude": 39.93941992
   },
   {
     "graduatesCount": 116,
@@ -107,7 +116,8 @@
     "name": "Julia R. Masterman School",
     "schoolId": "2140",
     "admissionType": "Special Admit",
-    "gpsLocation": "39.96320031, -75.16620758"
+    "longitude": -75.16620758,
+    "latitude": 39.96320031
   },
   {
     "graduatesCount": 149,
@@ -118,7 +128,8 @@
     "name": "Furness High School",
     "schoolId": "2160",
     "admissionType": "Neighborhood",
-    "gpsLocation": "39.923762, -75.150585"
+    "longitude": -75.150585,
+    "latitude": 39.923762
   },
   {
     "graduatesCount": 197,
@@ -129,7 +140,8 @@
     "name": "Franklin Learning Center",
     "schoolId": "2290",
     "admissionType": "Special Admit",
-    "gpsLocation": "39.965049, -75.162753"
+    "longitude": -75.162753,
+    "latitude": 39.965049
   },
   {
     "graduatesCount": null,
@@ -139,7 +151,8 @@
     "name": "Camelot Academy",
     "schoolId": "2310",
     "admissionType": "Alternative",
-    "gpsLocation": "39.978134, -75.177658"
+    "longitude": -75.177658,
+    "latitude": 39.978134
   },
   {
     "graduatesCount": 64,
@@ -150,7 +163,8 @@
     "name": "Girard Academic Music Program",
     "schoolId": "2410",
     "admissionType": "Special Admit",
-    "gpsLocation": "39.92210463, -75.18256439"
+    "longitude": -75.18256439,
+    "latitude": 39.92210463
   },
   {
     "graduatesCount": 3,
@@ -160,7 +174,8 @@
     "name": "Phila. Juv. Justice Services Ctr. School",
     "schoolId": "2530",
     "admissionType": "Alternative",
-    "gpsLocation": "39.96136565, -75.21572624"
+    "longitude": -75.21572624,
+    "latitude": 39.96136565
   },
   {
     "graduatesCount": 187,
@@ -171,7 +186,8 @@
     "name": "Academy at Palumbo",
     "schoolId": "2620",
     "admissionType": "Special Admit",
-    "gpsLocation": "39.94019787, -75.16194915"
+    "longitude": -75.16194915,
+    "latitude": 39.94019787
   },
   {
     "graduatesCount": 118,
@@ -182,7 +198,8 @@
     "name": "Science Leadership Academy",
     "schoolId": "2650",
     "admissionType": "Special Admit",
-    "gpsLocation": "39.963701, -75.162516"
+    "longitude": -75.162516,
+    "latitude": 39.963701
   },
   {
     "graduatesCount": 95,
@@ -193,7 +210,8 @@
     "name": "Constitution High School",
     "schoolId": "2670",
     "admissionType": "Citywide",
-    "gpsLocation": "39.950252, -75.152336"
+    "longitude": -75.152336,
+    "latitude": 39.950252
   },
   {
     "graduatesCount": 114,
@@ -204,7 +222,8 @@
     "name": "The Science Leadership Academy at Beeber",
     "schoolId": "2680",
     "admissionType": "Special Admit",
-    "gpsLocation": "39.98610221, -75.24192008"
+    "longitude": -75.24192008,
+    "latitude": 39.98610221
   },
   {
     "graduatesCount": 20,
@@ -214,7 +233,8 @@
     "name": "Ben Franklin High School EOP",
     "schoolId": "3210",
     "admissionType": "Alternative",
-    "gpsLocation": "39.962909, -75.159210"
+    "longitude": -75.15921,
+    "latitude": 39.962909
   },
   {
     "graduatesCount": 14,
@@ -224,7 +244,8 @@
     "name": "Liguori Academy-Fortis",
     "schoolId": "3240",
     "admissionType": "Alternative",
-    "gpsLocation": "39.994204, -75.111842"
+    "longitude": -75.111842,
+    "latitude": 39.994204
   },
   {
     "graduatesCount": 72,
@@ -234,7 +255,8 @@
     "name": "Excel Academy South",
     "schoolId": "3290",
     "admissionType": "Alternative",
-    "gpsLocation": "40.02608143, -75.10251944"
+    "longitude": -75.10251944,
+    "latitude": 40.02608143
   },
   {
     "graduatesCount": 25,
@@ -244,7 +266,8 @@
     "name": "El Centro de Estudiantes (Big Picture)",
     "schoolId": "3510",
     "admissionType": "Alternative",
-    "gpsLocation": "40.011798, -75.090845"
+    "longitude": -75.090845,
+    "latitude": 40.011798
   },
   {
     "graduatesCount": 15,
@@ -254,7 +277,8 @@
     "name": "Ombudsman Northwest",
     "schoolId": "3540",
     "admissionType": "Alternative",
-    "gpsLocation": "40.05586457, -75.15648403"
+    "longitude": -75.15648403,
+    "latitude": 40.05586457
   },
   {
     "graduatesCount": 26,
@@ -264,7 +288,8 @@
     "name": "One Bright Ray - Elmwood Campus",
     "schoolId": "3810",
     "admissionType": "Alternative",
-    "gpsLocation": "39.92251591, -75.22908493"
+    "longitude": -75.22908493,
+    "latitude": 39.92251591
   },
   {
     "graduatesCount": 12,
@@ -274,7 +299,8 @@
     "name": "Camelot Academy East",
     "schoolId": "3820",
     "admissionType": "Alternative",
-    "gpsLocation": "40.01425525, -75.12599679"
+    "longitude": -75.12599679,
+    "latitude": 40.01425525
   },
   {
     "graduatesCount": 17,
@@ -284,7 +310,8 @@
     "name": "Philadelphia OIC Workforce Academy",
     "schoolId": "3840",
     "admissionType": "Alternative",
-    "gpsLocation": "39.972966, -75.158721"
+    "longitude": -75.158721,
+    "latitude": 39.972966
   },
   {
     "graduatesCount": 11,
@@ -294,7 +321,8 @@
     "name": "Northeast High School EOP",
     "schoolId": "3850",
     "admissionType": "Alternative",
-    "gpsLocation": "40.055681, -75.071168"
+    "longitude": -75.071168,
+    "latitude": 40.055681
   },
   {
     "graduatesCount": 22,
@@ -304,7 +332,8 @@
     "name": "South Philadelphia High School EOP",
     "schoolId": "3880",
     "admissionType": "Alternative",
-    "gpsLocation": "39.9238987, -75.1691065"
+    "longitude": -75.1691065,
+    "latitude": 39.9238987
   },
   {
     "graduatesCount": 83,
@@ -315,7 +344,8 @@
     "name": "Overbrook High School",
     "schoolId": "4020",
     "admissionType": "Neighborhood",
-    "gpsLocation": "39.981028, -75.238556"
+    "longitude": -75.238556,
+    "latitude": 39.981028
   },
   {
     "graduatesCount": 185,
@@ -326,7 +356,8 @@
     "name": "High School of Engineering and Science",
     "schoolId": "4030",
     "admissionType": "Special Admit",
-    "gpsLocation": "39.98341809, -75.16127789"
+    "longitude": -75.16127789,
+    "latitude": 39.98341809
   },
   {
     "graduatesCount": 125,
@@ -337,7 +368,8 @@
     "name": "Murrell Dobbins Career and Technical High School",
     "schoolId": "4060",
     "admissionType": "Citywide",
-    "gpsLocation": "39.9954293, -75.16679334"
+    "longitude": -75.16679334,
+    "latitude": 39.9954293
   },
   {
     "graduatesCount": 29,
@@ -348,7 +380,8 @@
     "name": "Strawberry Mansion High School",
     "schoolId": "4140",
     "admissionType": "Neighborhood",
-    "gpsLocation": "39.99074371, -75.18402464"
+    "longitude": -75.18402464,
+    "latitude": 39.99074371
   },
   {
     "graduatesCount": 148,
@@ -359,7 +392,8 @@
     "name": "Thomas A. Edison High School",
     "schoolId": "5020",
     "admissionType": "Neighborhood",
-    "gpsLocation": "40.01116485, -75.12863791"
+    "longitude": -75.12863791,
+    "latitude": 40.01116485
   },
   {
     "graduatesCount": 35,
@@ -370,7 +404,8 @@
     "name": "Philadelphia Military Academy",
     "schoolId": "5050",
     "admissionType": "Citywide",
-    "gpsLocation": "39.98470959, -75.15443401"
+    "longitude": -75.15443401,
+    "latitude": 39.98470959
   },
   {
     "graduatesCount": 127,
@@ -381,7 +416,8 @@
     "name": "Jules E. Mastbaum Area Vocational Technical High School",
     "schoolId": "5060",
     "admissionType": "Citywide",
-    "gpsLocation": "39.99214686, -75.11213573"
+    "longitude": -75.11213573,
+    "latitude": 39.99214686
   },
   {
     "graduatesCount": 68,
@@ -392,7 +428,8 @@
     "name": "Parkway Northwest High School",
     "schoolId": "5070",
     "admissionType": "Special Admit",
-    "gpsLocation": "40.05664074, -75.16457453"
+    "longitude": -75.16457453,
+    "latitude": 40.05664074
   },
   {
     "graduatesCount": 114,
@@ -403,7 +440,8 @@
     "name": "Parkway Center City Middle College High School",
     "schoolId": "5080",
     "admissionType": "Special Admit",
-    "gpsLocation": "39.96300501, -75.1592865"
+    "longitude": -75.1592865,
+    "latitude": 39.96300501
   },
   {
     "graduatesCount": 44,
@@ -414,7 +452,8 @@
     "name": "Parkway West High School",
     "schoolId": "5090",
     "admissionType": "Special Admit",
-    "gpsLocation": "39.96425379, -75.21546704"
+    "longitude": -75.21546704,
+    "latitude": 39.96425379
   },
   {
     "graduatesCount": 139,
@@ -425,7 +464,8 @@
     "name": "William W. Bodine High School",
     "schoolId": "5150",
     "admissionType": "Special Admit",
-    "gpsLocation": "39.96793026, -75.14343443"
+    "longitude": -75.14343443,
+    "latitude": 39.96793026
   },
   {
     "graduatesCount": 73,
@@ -436,7 +476,8 @@
     "name": "Penn Treaty High School",
     "schoolId": "5160",
     "admissionType": "Neighborhood",
-    "gpsLocation": "39.97272711, -75.12787008"
+    "longitude": -75.12787008,
+    "latitude": 39.97272711
   },
   {
     "graduatesCount": null,
@@ -447,7 +488,8 @@
     "name": "Vaux High School: A Big Picture",
     "schoolId": "5180",
     "admissionType": "Neighborhood",
-    "gpsLocation": "39.976325, -75.174186"
+    "longitude": -75.174186,
+    "latitude": 39.976325
   },
   {
     "graduatesCount": 102,
@@ -458,7 +500,8 @@
     "name": "Kensington High School for Creative and Performing Arts",
     "schoolId": "5520",
     "admissionType": "Neighborhood",
-    "gpsLocation": "39.97794956, -75.1330532"
+    "longitude": -75.1330532,
+    "latitude": 39.97794956
   },
   {
     "graduatesCount": 104,
@@ -469,7 +512,8 @@
     "name": "Kensington Health Sciences Academy",
     "schoolId": "5550",
     "admissionType": "Neighborhood",
-    "gpsLocation": "39.985026, -75.128685"
+    "longitude": -75.128685,
+    "latitude": 39.985026
   },
   {
     "graduatesCount": 55,
@@ -480,7 +524,8 @@
     "name": "Building 21",
     "schoolId": "5610",
     "admissionType": "Citywide",
-    "gpsLocation": "40.053631, -75.152481"
+    "longitude": -75.152481,
+    "latitude": 40.053631
   },
   {
     "graduatesCount": 38,
@@ -491,7 +536,8 @@
     "name": "The U School",
     "schoolId": "5620",
     "admissionType": "Citywide",
-    "gpsLocation": "39.981983, -75.146256"
+    "longitude": -75.146256,
+    "latitude": 39.981983
   },
   {
     "graduatesCount": 35,
@@ -502,7 +548,8 @@
     "name": "The LINC",
     "schoolId": "5660",
     "admissionType": "Citywide",
-    "gpsLocation": "40.006819, -75.129736"
+    "longitude": -75.129736,
+    "latitude": 40.006819
   },
   {
     "graduatesCount": 100,
@@ -513,7 +560,8 @@
     "name": "Kensington High School",
     "schoolId": "5700",
     "admissionType": "Neighborhood",
-    "gpsLocation": "39.98483396, -75.12640188"
+    "longitude": -75.12640188,
+    "latitude": 39.98483396
   },
   {
     "graduatesCount": 536,
@@ -524,7 +572,8 @@
     "name": "Central High School",
     "schoolId": "6010",
     "admissionType": "Special Admit",
-    "gpsLocation": "40.0372851, -75.15074825"
+    "longitude": -75.15074825,
+    "latitude": 40.0372851
   },
   {
     "graduatesCount": 125,
@@ -535,7 +584,8 @@
     "name": "Roxborough High School",
     "schoolId": "6030",
     "admissionType": "Neighborhood",
-    "gpsLocation": "40.03802479, -75.22283357"
+    "longitude": -75.22283357,
+    "latitude": 40.03802479
   },
   {
     "graduatesCount": 111,
@@ -546,7 +596,8 @@
     "name": "Walter B. Saul High School",
     "schoolId": "6040",
     "admissionType": "Special Admit",
-    "gpsLocation": "40.04902036, -75.21981676"
+    "longitude": -75.21981676,
+    "latitude": 40.04902036
   },
   {
     "graduatesCount": 222,
@@ -557,7 +608,8 @@
     "name": "Philadelphia High School for Girls",
     "schoolId": "6050",
     "admissionType": "Special Admit",
-    "gpsLocation": "40.03898514, -75.14475989"
+    "longitude": -75.14475989,
+    "latitude": 40.03898514
   },
   {
     "graduatesCount": 83,
@@ -568,7 +620,8 @@
     "name": "Martin Luther King High School",
     "schoolId": "6060",
     "admissionType": "Neighborhood",
-    "gpsLocation": "40.05756238, -75.16217184"
+    "longitude": -75.16217184,
+    "latitude": 40.05756238
   },
   {
     "graduatesCount": 61,
@@ -579,7 +632,8 @@
     "name": "A. Philip Randolph Career and Technical High School",
     "schoolId": "6090",
     "admissionType": "Citywide",
-    "gpsLocation": "40.008504, -75.179609"
+    "longitude": -75.179609,
+    "latitude": 40.008504
   },
   {
     "graduatesCount": 56,
@@ -590,7 +644,8 @@
     "name": "Hill-Freedman World Academy",
     "schoolId": "6460",
     "admissionType": "Special Admit",
-    "gpsLocation": "40.071311, -75.175303"
+    "longitude": -75.175303,
+    "latitude": 40.071311
   },
   {
     "graduatesCount": 103,
@@ -601,7 +656,8 @@
     "name": "Lankenau High School",
     "schoolId": "6540",
     "admissionType": "Special Admit",
-    "gpsLocation": "40.06153271, -75.25295594"
+    "longitude": -75.25295594,
+    "latitude": 40.06153271
   },
   {
     "graduatesCount": 164,
@@ -612,7 +668,8 @@
     "name": "Frankford High School",
     "schoolId": "7010",
     "admissionType": "Neighborhood",
-    "gpsLocation": "40.021602, -75.084823"
+    "longitude": -75.084823,
+    "latitude": 40.021602
   },
   {
     "graduatesCount": 196,
@@ -623,7 +680,8 @@
     "name": "Samuel Fels High School",
     "schoolId": "7120",
     "admissionType": "Neighborhood",
-    "gpsLocation": "40.03564646, -75.09109404"
+    "longitude": -75.09109404,
+    "latitude": 40.03564646
   },
   {
     "graduatesCount": 293,
@@ -634,7 +692,8 @@
     "name": "Abraham Lincoln High School",
     "schoolId": "8010",
     "admissionType": "Neighborhood",
-    "gpsLocation": "40.04310838, -75.04479221"
+    "longitude": -75.04479221,
+    "latitude": 40.04310838
   },
   {
     "graduatesCount": 742,
@@ -645,7 +704,8 @@
     "name": "Northeast High School",
     "schoolId": "8020",
     "admissionType": "Neighborhood",
-    "gpsLocation": "40.05564409, -75.07118355"
+    "longitude": -75.07118355,
+    "latitude": 40.05564409
   },
   {
     "graduatesCount": 245,
@@ -656,7 +716,8 @@
     "name": "George Washington High School",
     "schoolId": "8030",
     "admissionType": "Neighborhood",
-    "gpsLocation": "40.10598577, -75.02723013"
+    "longitude": -75.02723013,
+    "latitude": 40.10598577
   },
   {
     "graduatesCount": 135,
@@ -667,7 +728,8 @@
     "name": "Arts Academy at Benjamin Rush",
     "schoolId": "8040",
     "admissionType": "Special Admit",
-    "gpsLocation": "40.08253275, -74.9752061"
+    "longitude": -74.9752061,
+    "latitude": 40.08253275
   },
   {
     "graduatesCount": 64,
@@ -677,7 +739,8 @@
     "name": "OIC CADI",
     "schoolId": "8070",
     "admissionType": "Alternative",
-    "gpsLocation": "39.958322, -75.144801"
+    "longitude": -75.144801,
+    "latitude": 39.958322
   },
   {
     "graduatesCount": 57,
@@ -687,7 +750,8 @@
     "name": "Excel Academy North",
     "schoolId": "8080",
     "admissionType": "Alternative",
-    "gpsLocation": "39.978134, -75.177658"
+    "longitude": -75.177658,
+    "latitude": 39.978134
   },
   {
     "graduatesCount": 126,
@@ -698,7 +762,8 @@
     "name": "Swenson Arts and Technology High School",
     "schoolId": "8090",
     "admissionType": "Citywide",
-    "gpsLocation": "40.0921093, -75.01398863"
+    "longitude": -75.01398863,
+    "latitude": 40.0921093
   },
   {
     "graduatesCount": 22,
@@ -708,7 +773,8 @@
     "name": "Gateway to College - Community College of Philadelphia",
     "schoolId": "8100",
     "admissionType": "Alternative",
-    "gpsLocation": "39.9629017, -75.16627046"
+    "longitude": -75.16627046,
+    "latitude": 39.9629017
   },
   {
     "graduatesCount": 43,
@@ -718,7 +784,8 @@
     "name": "One Bright Ray - Fairhill Campus",
     "schoolId": "8190",
     "admissionType": "Alternative",
-    "gpsLocation": "39.99376434, -75.13801882"
+    "longitude": -75.13801882,
+    "latitude": 39.99376434
   },
   {
     "graduatesCount": 18,
@@ -728,7 +795,8 @@
     "name": "YES Philly",
     "schoolId": "8450",
     "admissionType": "Alternative",
-    "gpsLocation": "39.97290649, -75.15863287"
+    "longitude": -75.15863287,
+    "latitude": 39.97290649
   },
   {
     "graduatesCount": 13,
@@ -738,7 +806,8 @@
     "name": "Philadelphia Learning Academy South",
     "schoolId": "8460",
     "admissionType": "Alternative",
-    "gpsLocation": "39.96971371, -75.21013521"
+    "longitude": -75.21013521,
+    "latitude": 39.96971371
   },
   {
     "graduatesCount": 6,
@@ -748,7 +817,8 @@
     "name": "Philadelphia Learning Academy North",
     "schoolId": "8470",
     "admissionType": "Alternative",
-    "gpsLocation": "40.01425525, -75.12599679"
+    "longitude": -75.12599679,
+    "latitude": 40.01425525
   },
   {
     "graduatesCount": 1,
@@ -758,7 +828,8 @@
     "name": "Pennypack House School",
     "schoolId": "8540",
     "admissionType": "Alternative",
-    "gpsLocation": "40.032021, -75.019689"
+    "longitude": -75.019689,
+    "latitude": 40.032021
   },
   {
     "graduatesCount": 50,
@@ -769,7 +840,8 @@
     "name": "The Workshop School",
     "schoolId": "8560",
     "admissionType": "Citywide",
-    "gpsLocation": "39.95530589, -75.21855329"
+    "longitude": -75.21855329,
+    "latitude": 39.95530589
   },
   {
     "graduatesCount": null,
@@ -779,7 +851,8 @@
     "name": "Crossroads Accelerated Academy",
     "schoolId": "8690",
     "admissionType": "Alternative",
-    "gpsLocation": "39.96971371, -75.21013521"
+    "longitude": -75.21013521,
+    "latitude": 39.96971371
   },
   {
     "graduatesCount": 107,
@@ -790,7 +863,8 @@
     "name": "Philadelphia Virtual Academy",
     "schoolId": "8780",
     "admissionType": "Virtual",
-    "gpsLocation": "39.96102159, -75.16264405"
+    "longitude": -75.16264405,
+    "latitude": 39.96102159
   },
   {
     "graduatesCount": 20,
@@ -800,7 +874,8 @@
     "name": "One Bright Ray Mansion",
     "schoolId": "8860",
     "admissionType": "Alternative",
-    "gpsLocation": "39.99074371, -75.18402464"
+    "longitude": -75.18402464,
+    "latitude": 39.99074371
   },
   {
     "graduatesCount": 12,
@@ -810,7 +885,8 @@
     "name": "One Bright Ray Mansion Evening",
     "schoolId": "8870",
     "admissionType": "Alternative",
-    "gpsLocation": "39.99074371, -75.18402464"
+    "longitude": -75.18402464,
+    "latitude": 39.99074371
   },
   {
     "graduatesCount": 48,
@@ -820,108 +896,126 @@
     "name": "One Bright Ray - Simpson Campus",
     "schoolId": "8890",
     "admissionType": "Alternative",
-    "gpsLocation": "40.00528, -75.10560096"
+    "longitude": -75.10560096,
+    "latitude": 40.00528
   },
   {
     "name": "Re-Engagement Center",
     "schoolId": "8900",
     "admissionType": "Alternative",
-    "gpsLocation": "39.96102159, -75.16264405"
+    "longitude": -75.16264405,
+    "latitude": 39.96102159
   },
   {
     "name": "YouthBuild Philadelphia Charter School",
     "schoolId": "3304",
     "admissionType": "Citywide With Criteria",
-    "gpsLocation": "39.97290649, -75.15863287"
+    "longitude": -75.15863287,
+    "latitude": 39.97290649
   },
   {
     "name": "Imhotep Institute Charter High School",
     "schoolId": "3309",
     "admissionType": "Citywide",
-    "gpsLocation": "40.049427, -75.154717"
+    "longitude": -75.154717,
+    "latitude": 40.049427
   },
   {
     "name": "Multicultural Academy Charter School",
     "schoolId": "3312",
     "admissionType": "Citywide",
-    "gpsLocation": "40.01112725, -75.15073123"
+    "longitude": -75.15073123,
+    "latitude": 40.01112725
   },
   {
     "name": "Preparatory Charter School of Mathematics, Science, Technology and Careers",
     "schoolId": "3313",
     "admissionType": "Citywide",
-    "gpsLocation": "39.92845355, -75.18665686"
+    "longitude": -75.18665686,
+    "latitude": 39.92845355
   },
   {
     "name": "Freire Charter School",
     "schoolId": "3318",
     "admissionType": "Citywide",
-    "gpsLocation": "39.95247289, -75.17442259"
+    "longitude": -75.17442259,
+    "latitude": 39.95247289
   },
   {
     "name": "Franklin Towne Charter High School",
     "schoolId": "3331",
     "admissionType": "Citywide With Criteria",
-    "gpsLocation": "40.007337, -75.066611"
+    "longitude": -75.066611,
+    "latitude": 40.007337
   },
   {
     "name": "KIPP DuBois Charter School",
     "schoolId": "3353",
     "admissionType": "Citywide With Criteria",
-    "gpsLocation": "39.98043019, -75.22085032"
+    "longitude": -75.22085032,
+    "latitude": 39.98043019
   },
   {
     "name": "Philadelphia Electrical and Technology Charter School",
     "schoolId": "3358",
     "admissionType": "Citywide",
-    "gpsLocation": "39.95060789, -75.16511082"
+    "longitude": -75.16511082,
+    "latitude": 39.95060789
   },
   {
     "name": "Mastery Charter School at Lenfest",
     "schoolId": "3361",
     "admissionType": "Citywide With Criteria",
-    "gpsLocation": "39.94950579, -75.14734776"
+    "longitude": -75.14734776,
+    "latitude": 39.94950579
   },
   {
     "name": "Mastery Charter School at Shoemaker",
     "schoolId": "3383",
     "admissionType": "Citywide With Criteria",
-    "gpsLocation": "39.975799, -75.228437"
+    "longitude": -75.228437,
+    "latitude": 39.975799
   },
   {
     "name": "Boys Latin of Philadelphia Charter School",
     "schoolId": "3388",
     "admissionType": "Citywide",
-    "gpsLocation": "39.95172558, -75.23374851"
+    "longitude": -75.23374851,
+    "latitude": 39.95172558
   },
   {
     "name": "Mastery Charter School at Pickett",
     "schoolId": "3393",
     "admissionType": "Citywide With Criteria",
-    "gpsLocation": "40.03187441, -75.18087124"
+    "longitude": -75.18087124,
+    "latitude": 40.03187441
   },
   {
     "name": "Aspira Charter School at Olney",
     "schoolId": "3414",
     "admissionType": "Neighborhood",
-    "gpsLocation": "40.028772, -75.123808"
+    "longitude": -75.123808,
+    "latitude": 40.028772
   },
   {
     "name": "Mastery Charter School at Gratz",
     "schoolId": "3416",
     "admissionType": "Neighborhood",
-    "gpsLocation": "40.01453965, -75.15660685"
+    "longitude": -75.15660685,
+    "latitude": 40.01453965
   },
   {
     "name": "Universal Charter School at Audenried",
     "schoolId": "3417",
     "admissionType": "Neighborhood",
-    "gpsLocation": "39.933737, -75.198590"
+    "longitude": -75.19859,
+    "latitude": 39.933737
   },
   {
     "name": "TECH Freire Charter School",
     "schoolId": "3441",
     "admissionType": "Citywide With Criteria",
-    "gpsLocation": "39.986869, -75.155669"
+    "longitude": -75.155669,
+    "latitude": 39.986869
   }
 ]

@@ -56,7 +56,13 @@ export default async (req, res) => {
         ..._.pick(attendanceRatesBySchool[school.schoolId], [
           "averageDailyAttendance",
         ]),
-        ..._.pick(school, ["name", "schoolId", "admissionType", "gpsLocation"]),
+        ..._.pick(school, [
+          "name",
+          "schoolId",
+          "admissionType",
+          "longitude",
+          "latitude",
+        ]),
       };
     });
 
