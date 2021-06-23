@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import highschools from "data/high_school_2020.json";
+import { Box, Heading, Text, Button } from "@chakra-ui/react";
 
 const initialZoom = 12;
 const initialIconWidth = 10;
@@ -41,6 +42,7 @@ const MapBox = ({ mapBoxApiKey }) => {
       mapboxApiAccessToken={mapBoxApiKey}
       minZoom={10}
       maxZoom={15}
+      bearing={9.5}
     >
       {highschools.map((school) => {
         return (
@@ -62,7 +64,18 @@ const MapBox = ({ mapBoxApiKey }) => {
           closeButton={true}
           closeOnClick={false}
         >
-          <p>{currentSchool.name}</p>
+          <Box maxWidth={450} padding={5}>
+            <Heading mb={4} fontSize="md">
+              {currentSchool.name}
+            </Heading>
+            <Box mb={4}>
+              <Text>Graduation Rate: {currentSchool.graduationRate}</Text>
+              <Text>
+                Attendance Rate: {currentSchool.averageDailyAttendance}
+              </Text>
+            </Box>
+            <Button>Add School</Button>
+          </Box>
         </Popup>
       )}
     </ReactMapGL>
