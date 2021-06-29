@@ -1,4 +1,5 @@
 import Table from "rc-table";
+import { Box } from "@chakra-ui/react";
 
 const renderAsPercent = (rate: number) => {
   if (!rate) {
@@ -33,7 +34,11 @@ const columns = [
   },
 ];
 const AllItemsTable = ({ data }) => {
-  return <Table data={data} columns={columns} />;
+  return (
+    <Box maxWidth={800} margin="auto">
+      <Table data={data} columns={columns} />
+    </Box>
+  );
 };
 
 export default AllItemsTable;

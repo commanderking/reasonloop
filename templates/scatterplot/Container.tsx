@@ -1,31 +1,32 @@
-import { useState } from "react";
-import { Box, Heading, Text, Textarea, Button } from "@chakra-ui/react";
+import { useState, useMemo } from "react";
+import { Box, Heading } from "@chakra-ui/react";
+import _ from "lodash";
+
 import data from "data/high_school_2020.json";
 import AllItemsTable from "templates/scatterplot/components/AllItemsTable";
+import SchoolsSelection from "templates/scatterplot/phases/SchoolsSelection";
+import SchoolsSelectionReflection from "templates/scatterplot/phases/SchoolsSelectionReflection";
+import { phases } from "templates/scatterplot/constants/phases";
 
 const ScatterPlotContainer = () => {
-  const [answer, setAnswer] = useState("");
-  const handleInputChange = (e) => {
-    let inputValue = e.target.value;
-    setAnswer(inputValue);
-  };
+  const [currentPhase, setCurrentPhase] = useState(
+    phases.SCHOOLS_SELECTION_INITIAL.value
+  );
+
+  const schools = useMemo(() => _.sortBy(data, "name"), [data]);
 
   return (
     <Box>
       <Heading>Project - Trends in Philadelphia School Districts</Heading>
-      <Text>Pick 5-10 high schools that you recognize!</Text>
-      <Box>
-        <Text>
-          What are some things you notice about the schools you've selected?
-        </Text>
-        <Textarea
-          value={answer}
-          onChange={handleInputChange}
-          placeholder="The high school with the highest graduation rate is... &#10;All high schools... &#10;It seems schools that have a higher..."
-        />
-      </Box>
-      <Button colorScheme="teal">Submit</Button>
-      <AllItemsTable data={data} />
+      {currentPhase === phases.SCHOOLS_SELECTION_INITIAL.value && (
+        <SchoolsSelection schools={schools} />
+      )}
+
+      {currentPhase === phases.SCHOOLS_SELECTION_INITIAL_REFLECTION.value && (
+        <SchoolsSelectionReflection />
+      )}
+
+      {/* <AllItemsTable data={schools} /> */}
     </Box>
   );
 };
