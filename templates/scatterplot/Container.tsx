@@ -17,9 +17,11 @@ const ScatterPlotContainer = () => {
 
   return (
     <Box>
-      <Heading>Project - Trends in Philadelphia School Districts</Heading>
+      <Heading mb={8}>
+        Project - Trends in Philadelphia School Districts
+      </Heading>
       {currentPhase === phases.SCHOOLS_SELECTION_INITIAL.value && (
-        <SchoolsSelection schools={schools} />
+        <SchoolsSelection schools={schools} setCurrentPhase={setCurrentPhase} />
       )}
 
       {currentPhase === phases.SCHOOLS_SELECTION_INITIAL_REFLECTION.value && (
