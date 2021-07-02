@@ -5,24 +5,25 @@ import {
   Box,
   Heading,
   Text,
+  Tooltip,
   SimpleGrid,
   Button,
-  Select,
-  Stack,
   FormControl,
-  FormLabel,
   Divider,
 } from "@chakra-ui/react";
 import ClosableTags from "templates/scatterplot/components/ClosableTags";
 import { phases } from "templates/scatterplot/constants/phases";
 
 const SchoolsSelection = ({ schools, setCurrentPhase }) => {
-  const [currentSchoolId, setCurrentSchoolId] = useState(schools[0]?.schoolId);
   const [addedSchools, setAddedSchools] = useState([]);
 
   const schoolsById = useMemo(() => {
     return _.keyBy(schools, "schoolId");
   }, [schools]);
+
+  const addedSchoolsById = useMemo(() => {
+    return _.keyBy(addedSchools, "schoolId");
+  }, [addedSchools]);
 
   const addedSchoolsTags = useMemo(() => {
     return addedSchools.map((school) => {
@@ -39,35 +40,55 @@ const SchoolsSelection = ({ schools, setCurrentPhase }) => {
     );
     setAddedSchools(newSchools);
   };
+
+  const addedSchoolsCount = addedSchools.length;
+  const tooFewSchools = addedSchoolsCount < 5;
+  const tooManySchools = addedSchoolsCount > 10;
+
   return (
     <Box>
       <Heading mb={4} size="md">
         Pick 5-10 high schools that you recognize!
       </Heading>
       <FormControl id="school">
-        <Box maxWidth={500}>
-          <FormLabel>School</FormLabel>
-          <Select
-            value={currentSchoolId}
-            onChange={(event) => setCurrentSchoolId(event.target.value)}
-          >
-            {schools.map((school) => {
-              return (
-                <option key={school.schoolId} value={school.schoolId}>
-                  {school.name}
-                </option>
-              );
-            })}
-          </Select>
-        </Box>
-        <Button
-          size="sm"
-          onClick={() => {
-            setAddedSchools([...addedSchools, schoolsById[currentSchoolId]]);
-          }}
+        <Box
+          maxWidth={500}
+          p={4}
+          border="1px solid black"
+          overflowY="scroll"
+          maxHeight={500}
         >
-          Add School
-        </Button>
+          {schools.map((school) => {
+            const isAdded = addedSchoolsById[school.schoolId];
+            return (
+              <SimpleGrid
+                key={school.schoolId}
+                templateColumns={"375px 100px"}
+                borderBottom="1px solid gray"
+                pt={3}
+                pb={3}
+              >
+                <Text maxWidth="400px" isTruncated>
+                  {school.name}
+                </Text>
+                <Button
+                  maxWidth="50px"
+                  size="xs"
+                  onClick={() => {
+                    setAddedSchools([
+                      ...addedSchools,
+                      schoolsById[school.schoolId],
+                    ]);
+                  }}
+                  colorScheme={isAdded ? "gray" : "teal"}
+                  disabled={isAdded}
+                >
+                  {isAdded ? "Added" : "Add"}
+                </Button>
+              </SimpleGrid>
+            );
+          })}
+        </Box>
       </FormControl>
       <Box mt={8}>
         <Heading mb={4} size="md">
@@ -86,11 +107,19 @@ const SchoolsSelection = ({ schools, setCurrentPhase }) => {
       </Box>
       <Divider mt={8} />
       <Box mt={4}>
+        {(tooFewSchools || tooManySchools) && (
+          <Box>
+            <Text fontSize="lg" as="i" color="red.600">
+              Please select between 5-10 schools before submitting.
+            </Text>
+          </Box>
+        )}
         <Button
           onClick={() => {
             setCurrentPhase(phases.SCHOOLS_SELECTION_INITIAL_REFLECTION);
           }}
           colorScheme="teal"
+          isDisabled={tooFewSchools || tooManySchools}
         >
           Submit
         </Button>
