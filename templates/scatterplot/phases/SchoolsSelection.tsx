@@ -7,7 +7,6 @@ import {
   Text,
   SimpleGrid,
   Button,
-  FormControl,
   Divider,
 } from "@chakra-ui/react";
 import ClosableTags from "templates/scatterplot/components/ClosableTags";
@@ -94,7 +93,7 @@ const SchoolsSelection = ({ schools, setCurrentPhase }) => {
         p={4}
         border={grayBorder}
         overflowY="scroll"
-        maxHeight={500}
+        maxHeight={600}
       >
         {schools.map((school) => {
           const isAdded = addedSchoolsById[school.schoolId];
