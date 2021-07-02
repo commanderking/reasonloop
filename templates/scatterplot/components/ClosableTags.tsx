@@ -20,7 +20,7 @@ const ClosableTags = ({ tags, onCloseClick }: Props) => {
             key={"lg"}
             borderRadius="full"
             variant="solid"
-            colorScheme="teal"
+            // colorScheme="teal"
             mr={2}
             mb={2}
           >
