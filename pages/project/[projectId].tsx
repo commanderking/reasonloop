@@ -1,13 +1,7 @@
 import CoordinateGridContainer from "templates/coordinategrid/Container";
-import useSWR from "swr";
-
-const fetcher = (args) => {
-  return fetch(args).then((res) => res.json());
-};
+import data from "data/celltower/camden.json";
 
 const ProjectPage = () => {
-  const { data, error } = useSWR("/api/project", fetcher);
-
   if (!data) {
     return <div>Loading Project</div>;
   }
