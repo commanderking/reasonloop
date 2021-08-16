@@ -1,6 +1,6 @@
 import CoordinateGridContainer from "templates/coordinategrid/Container";
 import data from "data/celltower/camden.json";
-import { useQuery, gql } from "@apollo/client";
+import { gql } from "@apollo/client";
 
 const ACTIVITIES = gql`
   query Activities {
@@ -11,9 +11,8 @@ const ACTIVITIES = gql`
 `;
 
 const ProjectPage = () => {
-  const { loading, error, data: test } = useQuery(ACTIVITIES);
-
-  console.log("test", test);
+  // Comment out until backend is ready
+  // const { loading, error, data: test } = useQuery(ACTIVITIES);
 
   if (!data) {
     return <div>Loading Project</div>;
