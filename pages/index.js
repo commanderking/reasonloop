@@ -11,14 +11,17 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import AuthenticTable from "components/home/AuthenticTable";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Home() {
+  const { loginWithRedirect } = useAuth0();
   return (
     <Box textAlign="center">
       <Head textAlign="center">
         <title>Reason Loop - Truly Authentic Math Problems</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Button onClick={() => loginWithRedirect()}>Login</Button>
 
       <Box>
         <Heading>Truly Authentic Math Problems</Heading>
