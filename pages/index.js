@@ -21,7 +21,7 @@ export default function Home() {
         <title>Reason Loop - Truly Authentic Math Problems</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Button onClick={() => loginWithRedirect()}>Login</Button>
+      {/* <Button onClick={() => loginWithRedirect()}>Login</Button> */}
 
       <Box>
         <Heading>Truly Authentic Math Problems</Heading>
