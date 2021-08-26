@@ -7,6 +7,7 @@ import {
   gql,
 } from "@apollo/client";
 import { Auth0Provider } from "@auth0/auth0-react";
+import Navbar from "components/navbar/Container";
 
 const client = new ApolloClient({
   uri: "http://localhost:4000/graphql",
@@ -22,8 +23,11 @@ function MyApp({ Component, pageProps }) {
     >
       <ApolloProvider client={client}>
         <ChakraProvider theme={theme}>
-          <Box maxWidth="1048px" margin="auto" padding="20px" mt={10}>
-            <Component {...pageProps} />
+          <Box>
+            <Navbar />
+            <Box maxWidth="1048px" margin="auto" padding="20px" mt={10}>
+              <Component {...pageProps} />
+            </Box>
           </Box>
         </ChakraProvider>
       </ApolloProvider>
