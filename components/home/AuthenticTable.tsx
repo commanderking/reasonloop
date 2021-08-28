@@ -69,7 +69,7 @@ const AuthenticTable = () => {
         </Tr>
         {tableData.map((row) => {
           return (
-            <Tr>
+            <Tr key={row.feature}>
               <Td pt={10} pb={10}>
                 <Text as="b">{row.feature}</Text>
               </Td>

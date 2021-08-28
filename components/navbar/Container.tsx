@@ -7,7 +7,7 @@ import {
   Stack,
   Collapse,
   Icon,
-  Link,
+  Link as ChakraLink,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -22,12 +22,12 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 import { useAuth0 } from "@auth0/auth0-react";
+import Link from "next/link";
 
 // Modified from https://github.com/hauptrolle/chakra-templates
 
 export default function WithSubnavigation() {
-  const { loginWithRedirect } = useAuth0();
-
+  const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -64,13 +64,17 @@ export default function WithSubnavigation() {
           )}
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Text
-            textAlign={useBreakpointValue({ base: "center", md: "left" })}
-            fontFamily={"heading"}
-            color={useColorModeValue("gray.800", "white")}
-          >
-            Parsewise
-          </Text>
+          <Link href="/">
+            <Button
+              textAlign={useBreakpointValue({ base: "center", md: "left" })}
+              fontFamily={"heading"}
+              color={useColorModeValue("gray.800", "white")}
+              variant="link"
+              href="/"
+            >
+              Parsewise
+            </Button>
+          </Link>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
@@ -83,28 +87,26 @@ export default function WithSubnavigation() {
           direction={"row"}
           spacing={6}
         >
-          <Button
-            as={"a"}
-            fontSize={"sm"}
-            fontWeight={400}
-            variant={"link"}
-            onClick={() => loginWithRedirect()}
-          >
-            Sign In
-          </Button>
-          <Button
-            display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
-            fontWeight={600}
-            color={"white"}
-            bg={"teal.400"}
-            href={"#"}
-            _hover={{
-              bg: "teal.300",
-            }}
-          >
-            Sign Up
-          </Button>
+          <LoginLogoutButton
+            isAuthenticated={isAuthenticated}
+            handleLogin={loginWithRedirect}
+            handleLogout={logout}
+          />
+          {!isAuthenticated && (
+            <Button
+              display={{ base: "none", md: "inline-flex" }}
+              fontSize={"sm"}
+              fontWeight={600}
+              color={"white"}
+              bg={"teal.400"}
+              href={"#"}
+              _hover={{
+                bg: "teal.300",
+              }}
+            >
+              Sign Up
+            </Button>
+          )}
         </Stack>
       </Flex>
 
@@ -126,7 +128,7 @@ const DesktopNav = () => {
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
-              <Link
+              <ChakraLink
                 p={2}
                 href={navItem.href ?? "#"}
                 fontSize={"sm"}
@@ -138,7 +140,7 @@ const DesktopNav = () => {
                 }}
               >
                 {navItem.label}
-              </Link>
+              </ChakraLink>
             </PopoverTrigger>
 
             {navItem.children && (
@@ -258,9 +260,9 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         >
           {children &&
             children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
+              <ChakraLink key={child.label} py={2} href={child.href}>
                 {child.label}
-              </Link>
+              </ChakraLink>
             ))}
         </Stack>
       </Collapse>
@@ -276,3 +278,22 @@ interface NavItem {
 }
 
 const NAV_ITEMS: Array<NavItem> = [];
+
+const LoginLogoutButton = ({ isAuthenticated, handleLogin, handleLogout }) => {
+  const buttonText = isAuthenticated ? "Sign out" : "Sign in";
+  const handleClick = isAuthenticated ? handleLogout : handleLogin;
+
+  return (
+    <Button
+      as={"a"}
+      fontSize={"sm"}
+      fontWeight={400}
+      variant={"link"}
+      onClick={() => {
+        handleClick();
+      }}
+    >
+      {buttonText}
+    </Button>
+  );
+};
