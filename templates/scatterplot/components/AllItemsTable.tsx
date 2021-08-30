@@ -14,6 +14,11 @@ const columns = [
     title: "School",
     dataIndex: "name",
     key: "name",
+    onCell: () => ({
+      style: {
+        padding: "5px",
+      },
+    }),
   },
   {
     title: "Admission Type",
@@ -35,8 +40,19 @@ const columns = [
 ];
 const AllItemsTable = ({ data }) => {
   return (
-    <Box maxWidth={800} margin="auto">
-      <Table data={data} columns={columns} />
+    <Box
+      padding="20px"
+      margin="auto"
+      border="1px solid lightgray"
+      borderRadius="5px"
+    >
+      <Table
+        onRow={() => ({
+          style: { borderBottom: "1px solid black", padding: "5px" },
+        })}
+        data={data}
+        columns={columns}
+      />
     </Box>
   );
 };

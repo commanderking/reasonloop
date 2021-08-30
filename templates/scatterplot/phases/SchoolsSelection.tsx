@@ -14,9 +14,12 @@ import { phases } from "templates/scatterplot/constants/phases";
 
 const grayBorder = "1px solid lightgray";
 
-const SchoolsSelection = ({ schools, setCurrentPhase }) => {
-  const [addedSchools, setAddedSchools] = useState([]);
-
+const SchoolsSelection = ({
+  schools,
+  addedSchools,
+  setAddedSchools,
+  setCurrentPhase,
+}) => {
   const schoolsById = useMemo(() => {
     return _.keyBy(schools, "schoolId");
   }, [schools]);
@@ -74,7 +77,7 @@ const SchoolsSelection = ({ schools, setCurrentPhase }) => {
       <Box mt={4}>
         <Button
           onClick={() => {
-            setCurrentPhase(phases.SCHOOLS_SELECTION_INITIAL_REFLECTION);
+            setCurrentPhase(phases.SCHOOLS_SELECTION_INITIAL_REFLECTION.value);
           }}
           colorScheme="teal"
           isDisabled={tooFewSchools || tooManySchools}

@@ -7,4 +7,8 @@ export const phases = {
     order: 1,
     value: "SCHOOLS_SELECTION_INITIAL_REFLECTION",
   },
+  GRAPHING_INIITAL: {
+    order: 2,
+    value: "GRAPHING_INITIAL",
+  },
 };
