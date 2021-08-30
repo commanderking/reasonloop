@@ -10,7 +10,7 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import Navbar from "components/navbar/Container";
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000/graphql",
+  uri: process.env.NEXT_PUBLIC_BACKEND_URL,
   cache: new InMemoryCache(),
 });
 
