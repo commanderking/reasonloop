@@ -6,10 +6,11 @@ import Navbar from "components/navbar/Container";
 let apolloClient;
 
 function MyApp({ Component, pageProps }) {
+  // client must be defined in component to leverage env variables
   apolloClient =
     apolloClient ||
     new ApolloClient({
-      uri: "http://localhost:4000/graphql",
+      uri: process.env.NEXT_PUBLIC_BACKEND_URL,
       cache: new InMemoryCache(),
     });
 
