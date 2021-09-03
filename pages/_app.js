@@ -19,6 +19,9 @@ function MyApp({ Component, pageProps }) {
       domain={process.env.NEXT_PUBLIC_AUTH0_DOMAIN}
       clientId={process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID}
       redirectUri={process.env.NEXT_PUBLIC_REDIRECT_URI}
+      // audience needed to get proper jwt for backend
+      audience={process.env.NEXT_PUBLIC_AUTH0_AUDIENCE}
+      scope="openid profile email"
     >
       <ApolloProvider client={apolloClient}>
         <ChakraProvider theme={theme}>
