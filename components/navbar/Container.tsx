@@ -92,7 +92,10 @@ export default function WithSubnavigation() {
             handleLogin={loginWithRedirect}
             handleLogout={logout}
           />
-          {!isAuthenticated && (
+          {/*
+            Leave out sign up button until we're ready for actual signups
+          */}
+          {/* {!isAuthenticated && (
             <Button
               display={{ base: "none", md: "inline-flex" }}
               fontSize={"sm"}
@@ -106,7 +109,7 @@ export default function WithSubnavigation() {
             >
               Sign Up
             </Button>
-          )}
+          )} */}
         </Stack>
       </Flex>
 
